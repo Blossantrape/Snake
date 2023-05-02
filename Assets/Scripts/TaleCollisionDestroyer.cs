@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,15 @@ public class TaleCollisionDestroyer : MonoBehaviour
         {
             Debug.LogError("Вы проиграли, очень жаль!");
             Destroy(transform.parent.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Border_tag")
+        {
+            Destroy(gameObject);
+            Debug.LogError("Border!");
         }
     }
 }
