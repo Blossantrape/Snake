@@ -17,12 +17,11 @@ public class TaleCollisionDestroyer : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D objectCollision)
     {
-        if (collision.gameObject.tag == "Border_tag")
+        if (objectCollision.gameObject.name == "Border_right")
         {
-            Destroy(gameObject);
-            Debug.LogError("Border!");
+            Debug.Log("Wow!");
         }
     }
 }
