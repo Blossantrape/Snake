@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6232240540732757319}
   - component: {fileID: 6117018957789512232}
-  - component: {fileID: 6322240402760331515}
   - component: {fileID: 5846743328088538987}
   m_Layer: 0
   m_Name: Tale
@@ -32,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6117018957789512232
 SpriteRenderer:
@@ -86,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6322240402760331515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5473153703771618817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ae8b2923889234c9d4b115094702cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tale: {fileID: 0}
 --- !u!61 &5846743328088538987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,7 +121,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.512, y: 0.512}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 32, y: 32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

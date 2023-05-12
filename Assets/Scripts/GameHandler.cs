@@ -11,9 +11,4 @@ public class GameHandler : MonoBehaviour
         SpriteRenderer snakeSpriteRenderer = snakeHeadGameObject.AddComponent<SpriteRenderer>();
         snakeSpriteRenderer.sprite = GameAssets.i.snakeHeadSprite;
     }
-
-    private void Update()
-    {
-        throw new NotImplementedException();
-    }
 }
