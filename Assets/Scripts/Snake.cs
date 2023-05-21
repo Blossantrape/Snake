@@ -1,16 +1,21 @@
-using System;
 using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
     private Vector3Int gridMoveDirection; // Направление змейки.
-    private Vector3Int gridPosition; // Позиция змейки.
+    private Vector3 gridPosition; // Позиция змейки.
     private float gridMoveTimer; // Время для автоматического премещения змейки.
     private float gridMoveTimerMax; // Её максимальное значение.
+    private LevelGrid levelGrid; // Ссылка змеи, пометка.
+
+    public void Setup(LevelGrid levelGrid) // Ссылка змеи, пометка.
+    {
+        this.levelGrid = levelGrid; // Ссылка змеи, пометка.
+    }
     
     private void Awake() 
     {
-        gridPosition = new Vector3Int(10, 10, 1); // Позция змейки.
+        gridPosition = new Vector3(0, 0,  0.9f); // Позция змейки, 0.9 - z, чтобы объект отображался.
         gridMoveTimerMax = .5f; // Интервал движения.
         gridMoveTimer = gridMoveTimerMax; // Так надо.
         gridMoveDirection = new Vector3Int(1, 0, 0); // Векторное управление змеи, вправо.
@@ -72,6 +77,8 @@ public class Snake : MonoBehaviour
             transform.eulerAngles = new Vector3
                 (0, 0, GetAngleFromVector(gridMoveDirection) -90); // Изменение направления спрайта
                                             // по углу эйлера в взависимости от направления движения по Z.
+                                            // -90 т.к начало змейки влево, а голова спрайта смотрит вверх.
+            levelGrid.SnakeMoved(gridPosition); // Передаём сетке свою позицию.
         }
     }
 
@@ -83,5 +90,10 @@ public class Snake : MonoBehaviour
             n += 360;
         }
         return n;
+    }
+
+    public Vector3 GetGridPosition() // Метод, если кто-то запрашивает позицию змеи в сетке.
+    {
+        return gridPosition;
     }
 }

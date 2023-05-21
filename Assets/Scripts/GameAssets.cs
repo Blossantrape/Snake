@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class GameAssets : MonoBehaviour
@@ -11,5 +10,5 @@ public class GameAssets : MonoBehaviour
     }
 
     public Sprite snakeHeadSprite;
-
+    public Sprite foodSprite;
 }
