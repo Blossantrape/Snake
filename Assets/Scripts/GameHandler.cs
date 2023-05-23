@@ -16,11 +16,5 @@ public class GameHandler : MonoBehaviour
         
         snake.Setup(levelGrid); // Ссылка змеи, пометка.
         levelGrid.Setup(snake); // Передача ссылки на змею.
-
-        //эта хуета нужна теперь?
-        GameObject snakeHeadGameObject = new GameObject();
-        SpriteRenderer snakeSpriteRenderer = snakeHeadGameObject.AddComponent<SpriteRenderer>();
-        snakeSpriteRenderer.sprite = GameAssets.i.snakeHeadSprite;
-        //
     }
 }
