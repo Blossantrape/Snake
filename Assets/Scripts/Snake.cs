@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
-    private Vector3Int gridMoveDirection; // Направление змейки.
-    private Vector3 gridPosition; // Позиция змейки.
+    private Vector2Int gridMoveDirection; // Направление змейки.
+    private Vector2Int gridPosition; // Позиция змейки.
     private float gridMoveTimer; // Время для автоматического премещения змейки.
     private float gridMoveTimerMax; // Её максимальное значение.
     private LevelGrid levelGrid; // Ссылка змеи, пометка.
@@ -15,10 +15,10 @@ public class Snake : MonoBehaviour
     
     private void Awake() 
     {
-        gridPosition = new Vector3(0, 0,  0.9f); // Позция змейки, 0.9 - z, чтобы объект отображался.
+        gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
         gridMoveTimerMax = .5f; // Интервал движения.
         gridMoveTimer = gridMoveTimerMax; // Так надо.
-        gridMoveDirection = new Vector3Int(1, 0, 0); // Векторное управление змеи, вправо.
+        gridMoveDirection = new Vector2Int(1, 0); // Векторное управление змеи, вправо.
     }
 
     private void Update()
@@ -73,7 +73,7 @@ public class Snake : MonoBehaviour
             gridMoveTimer -= gridMoveTimerMax; // Не понял зачем.
             
             transform.position = new Vector3
-                (gridPosition.x, gridPosition.y, gridPosition.z); // Изменение позиции змейки.
+                (gridPosition.x, gridPosition.y); // Изменение позиции змейки.
             transform.eulerAngles = new Vector3
                 (0, 0, GetAngleFromVector(gridMoveDirection) -90); // Изменение направления спрайта
                                             // по углу эйлера в взависимости от направления движения по Z.
@@ -82,7 +82,7 @@ public class Snake : MonoBehaviour
         }
     }
 
-    private float GetAngleFromVector(Vector3Int dir) // Метор определяющий направление спрайта.
+    private float GetAngleFromVector(Vector2Int dir) // Метор определяющий направление спрайта.
     {
         float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         if (n > 0)
@@ -92,7 +92,7 @@ public class Snake : MonoBehaviour
         return n;
     }
 
-    public Vector3 GetGridPosition() // Метод, если кто-то запрашивает позицию змеи в сетке.
+    public Vector2Int GetGridPosition() // Метод, если кто-то запрашивает позицию змеи в сетке.
     {
         return gridPosition;
     }
