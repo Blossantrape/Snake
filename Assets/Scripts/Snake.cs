@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Snake : MonoBehaviour
@@ -7,6 +9,8 @@ public class Snake : MonoBehaviour
     private float gridMoveTimer; // Время для автоматического премещения змейки.
     private float gridMoveTimerMax; // Её максимальное значение.
     private LevelGrid levelGrid; // Ссылка змеи, пометка.
+    private int snakeBodySize; // Размер хвоста змеи.
+    private List<Vector2Int> snakeMovePositinList; // 
 
     public void Setup(LevelGrid levelGrid) // Ссылка змеи, пометка.
     {
@@ -19,6 +23,9 @@ public class Snake : MonoBehaviour
         gridMoveTimerMax = .5f; // Интервал движения.
         gridMoveTimer = gridMoveTimerMax; // Так надо.
         gridMoveDirection = new Vector2Int(1, 0); // Векторное управление змеи, вправо.
+
+        snakeMovePositinList = new List<Vector2Int>(); // Инициализация списка.
+        snakeBodySize = 0;
     }
 
     private void Update()
@@ -70,7 +77,27 @@ public class Snake : MonoBehaviour
         if (gridMoveTimer >= gridMoveTimerMax) // Если время >= максимального, то цикл выполняется.
         {
             gridPosition += gridMoveDirection; // Позиция + движение в сторону.
+            
+            bool snakeEatFood = levelGrid.TrySnakeEatFood(gridPosition); // Передаём сетке свою позицию.
+            if (snakeEatFood) // if true - body+1
+            {
+                snakeBodySize++;
+            }
+            
+            snakeMovePositinList.Insert(0, gridPosition);
+            
             gridMoveTimer -= gridMoveTimerMax; // Не понял зачем.
+
+            if (snakeMovePositinList.Count >= snakeBodySize + 1) // Если список больше размера змеи.
+            {   // Удаление последнего элемента списка.
+                snakeMovePositinList.RemoveAt(snakeMovePositinList.Count - 1);
+            }
+
+            for (int i = 0; i < snakeMovePositinList.Count; i++)
+            {
+                // Здесь должна быть реализована хуета того, как растёт хвост.
+                // Но та макака хуету сделала - затычку.
+            }
             
             transform.position = new Vector3
                 (gridPosition.x, gridPosition.y); // Изменение позиции змейки.
@@ -78,7 +105,6 @@ public class Snake : MonoBehaviour
                 (0, 0, GetAngleFromVector(gridMoveDirection) -90); // Изменение направления спрайта
                                             // по углу эйлера в взависимости от направления движения по Z.
                                             // -90 т.к начало змейки влево, а голова спрайта смотрит вверх.
-            levelGrid.SnakeMoved(gridPosition); // Передаём сетке свою позицию.
         }
     }
 
@@ -95,5 +121,13 @@ public class Snake : MonoBehaviour
     public Vector2Int GetGridPosition() // Метод, если кто-то запрашивает позицию змеи в сетке.
     {
         return gridPosition;
+    }
+
+    // Возвраает полный список позиций окупаемые змеёй: голова и хвост.
+    public List<Vector2Int> GetFullSnakeGridPositionList()
+    {
+        List<Vector2Int> gridPositionList = new List<Vector2Int>() { gridPosition };
+        gridPositionList.AddRange(snakeMovePositinList);
+        return gridPositionList;
     }
 }

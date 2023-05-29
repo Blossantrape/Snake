@@ -9,8 +9,6 @@ public class GameHandler : MonoBehaviour
     private LevelGrid levelGrid;
     private void Start()
     {
-        Debug.Log("GameHandler.Start");
-
         // Параметры берутся из размера используемой сетки (можно Scale from background).
         levelGrid = new LevelGrid(3, 6);
         
