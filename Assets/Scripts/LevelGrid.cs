@@ -32,7 +32,7 @@ public class LevelGrid
             // Если позиции совпали, то новая проверка.
             // Если позиция совпадает, то перегрузка IndexOf возвращает индек в списке
             // и цикл повторяется, а если нет, то условия выполняются и 
-        } while (snake.GetFullSnakeGridPositionList().IndexOf(foodGridPosition) != -1); 
+        } while (snake.GetFullSnakeGridPositionList().IndexOf(foodGridPosition) != -1);
 
         // Создание объекта с именем и компонентом рендера спрайта.
         foodGameObject = new GameObject("Food", typeof(SpriteRenderer));

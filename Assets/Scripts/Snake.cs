@@ -11,6 +11,7 @@ public class Snake : MonoBehaviour
     private LevelGrid levelGrid; // Ссылка змеи, пометка.
     private int snakeBodySize; // Размер хвоста змеи.
     private List<Vector2Int> snakeMovePositinList; // 
+    private List<SnakeBodyPart> snakeBodyPartList;
 
     public void Setup(LevelGrid levelGrid) // Ссылка змеи, пометка.
     {
@@ -26,6 +27,7 @@ public class Snake : MonoBehaviour
 
         snakeMovePositinList = new List<Vector2Int>(); // Инициализация списка.
         snakeBodySize = 0;
+        snakeBodyPartList = new List<SnakeBodyPart>();
     }
 
     private void Update()
@@ -82,6 +84,7 @@ public class Snake : MonoBehaviour
             if (snakeEatFood) // if true - body+1
             {
                 snakeBodySize++;
+                CreateSnakeBody();
             }
             
             snakeMovePositinList.Insert(0, gridPosition);
@@ -105,6 +108,21 @@ public class Snake : MonoBehaviour
                 (0, 0, GetAngleFromVector(gridMoveDirection) -90); // Изменение направления спрайта
                                             // по углу эйлера в взависимости от направления движения по Z.
                                             // -90 т.к начало змейки влево, а голова спрайта смотрит вверх.
+            UpdateSnakeBodyParts(); // Обновление тела.
+        }
+    }
+
+    private void CreateSnakeBody()
+    {
+        snakeBodyPartList.Add(new SnakeBodyPart(snakeBodyPartList.Count));
+    }
+
+    private void UpdateSnakeBodyParts()
+    {
+        for (int i = 0; i < snakeBodyPartList.Count; i++)
+        {
+            // Из позиций списка тел берутся значения двух векторов x и y для постановки позиции тела.
+            snakeBodyPartList[i].SetGridPosition(snakeMovePositinList[i]);
         }
     }
 
@@ -129,5 +147,26 @@ public class Snake : MonoBehaviour
         List<Vector2Int> gridPositionList = new List<Vector2Int>() { gridPosition };
         gridPositionList.AddRange(snakeMovePositinList);
         return gridPositionList;
+    }
+    
+    private class SnakeBodyPart
+    {
+        private Vector2Int gridPosition;
+        private Transform transform;
+        public SnakeBodyPart(int bodyIndex)
+        {
+            // Создание и инициализация объекта с нужным именем и типом.
+            GameObject snakeBodyGameObject = new GameObject("SnakeBody", typeof(SpriteRenderer));
+            // Получение компонента
+            snakeBodyGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.i.SnakeBodySprite;
+            snakeBodyGameObject.GetComponent<SpriteRenderer>().sortingOrder = bodyIndex;
+            transform = snakeBodyGameObject.transform;
+        }
+
+        public void SetGridPosition(Vector2Int gridPosition)
+        {
+            this.gridPosition = gridPosition;
+            transform.position = new Vector3(gridPosition.x, gridPosition.y);
+        }
     }
 }
