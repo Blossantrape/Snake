@@ -4,13 +4,13 @@ public class LevelGrid
 {
     private Vector2Int foodGridPosition; // Позиция объекта (яблока).
     private GameObject foodGameObject;
-    private int wight; // Высота сетки.
+    private int width; // Высота сетки.
     private int height; // Ширина сетки.
     private Snake snake; // Ссылка змеи, пометка.
     
-    public LevelGrid(int wight, int height)
+    public LevelGrid(int width, int height)
     {
-        this.wight = wight;
+        this.width = width;
         this.height = height;
     }
 
@@ -28,7 +28,7 @@ public class LevelGrid
         
         do { // Сначала идёт генерация, а потом проверка.
             // Генерация местоположения для игрового объекта (яблока).
-            foodGridPosition = new Vector2Int(Random.Range(0,wight), Random.Range(0, height));
+            foodGridPosition = new Vector2Int(Random.Range(0,width), Random.Range(0, height));
             // Если позиции совпали, то новая проверка.
             // Если позиция совпадает, то перегрузка IndexOf возвращает индек в списке
             // и цикл повторяется, а если нет, то условия выполняются и 

@@ -10,7 +10,7 @@ public class GameHandler : MonoBehaviour
     private void Start()
     {
         // Параметры берутся из размера используемой сетки (можно Scale from background).
-        levelGrid = new LevelGrid(3, 6);
+        levelGrid = new LevelGrid(8, 15);
         
         snake.Setup(levelGrid); // Ссылка змеи, пометка.
         levelGrid.Setup(snake); // Передача ссылки на змею.
