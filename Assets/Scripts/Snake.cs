@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
+    // Структура направлений змеи.
     private enum Direction // Варианты направления для спрайта тела.
     {
         Left,
@@ -11,6 +13,15 @@ public class Snake : MonoBehaviour
         Up,
         Down
     }
+    
+    // Структура состояний змеи.
+    private enum State
+    {
+        Alive,
+        Dead
+    }
+
+    private State state; //  Состояние змеи.
     private Direction gridMoveDirection; // Направление змейки.
     private Vector2Int gridPosition; // Позиция змейки.
     private float gridMoveTimer; // Время для автоматического премещения змейки.
@@ -35,12 +46,23 @@ public class Snake : MonoBehaviour
         snakeMovePositinList = new List<SnakeMovePosition>(); // Инициализация списка.
         snakeBodySize = 0; // Размер змеи
         snakeBodyPartList = new List<SnakeBodyPart>(); // Инициализация списка.
+
+        state = State.Alive; // Стандартное живое состояние.
     }
 
     private void Update()
     {
-        HandleInput();
-        HandleGrindMovement();
+        // Изменение режима игры в зависимости от состояния.
+        switch (state)
+        {
+            case State.Alive:
+                HandleInput();
+                HandleGrindMovement();
+                break;
+            case State.Dead:
+                break;
+        }
+        
     }
 
     private void HandleInput()
@@ -102,6 +124,8 @@ public class Snake : MonoBehaviour
             }
             
             gridPosition += gridMoveDirectionVector; // Позиция + движение в сторону.
+
+            gridPosition = levelGrid.ValidateGridPosition(gridPosition); // Перемещение змейки.
             
             bool snakeEatFood = levelGrid.TrySnakeEatFood(gridPosition); // Передаём сетке свою позицию.
             if (snakeEatFood) // if true - body+1
@@ -109,29 +133,33 @@ public class Snake : MonoBehaviour
                 snakeBodySize++;
                 CreateSnakeBody();
             }
-            
-            snakeMovePositinList.Insert(0, gridPosition);
-            
-            
 
             if (snakeMovePositinList.Count >= snakeBodySize + 1) // Если список больше размера змеи.
             {   // Удаление последнего элемента списка.
                 snakeMovePositinList.RemoveAt(snakeMovePositinList.Count - 1);
             }
 
-            for (int i = 0; i < snakeMovePositinList.Count; i++)
+            UpdateSnakeBodyParts(); // Обновление тела.
+            
+            // Проверяется положение головы и хвоста в сетке.
+            // Если совпало, то игра завершается.
+            foreach (SnakeBodyPart snakeBodyPart in snakeBodyPartList)
             {
-                // Здесь должна быть реализована хуета того, как растёт хвост.
-                // Но та макака хуету сделала - затычку.
+                Vector2Int snakeBodyPartGridPosition = snakeBodyPart.GetGridPosition();
+                if (gridPosition == snakeBodyPartGridPosition)
+                {
+                    //Game Over
+                    Debug.Log("YOU DEAD!");
+                    state = State.Dead;
+                }
             }
             
             transform.position = new Vector3
                 (gridPosition.x, gridPosition.y); // Изменение позиции змейки.
             transform.eulerAngles = new Vector3
-                (0, 0, GetAngleFromVector(gridMoveDirection) -90); // Изменение направления спрайта
+                (0, 0, GetAngleFromVector(gridMoveDirectionVector) -90); // Изменение направления спрайта
                                             // по углу эйлера в взависимости от направления движения по Z.
                                             // -90 т.к начало змейки влево, а голова спрайта смотрит вверх.
-            UpdateSnakeBodyParts(); // Обновление тела.
         }
     }
 
@@ -145,7 +173,7 @@ public class Snake : MonoBehaviour
         for (int i = 0; i < snakeBodyPartList.Count; i++)
         {
             // Из позиций списка тел берутся значения двух векторов x и y для постановки позиции тела.
-            snakeBodyPartList[i].SetGridPosition(snakeMovePositinList[i]);
+            snakeBodyPartList[i].SetSnakeMovePosition(snakeMovePositinList[i]);
         }
     }
 
@@ -195,7 +223,7 @@ public class Snake : MonoBehaviour
         public void SetSnakeMovePosition(SnakeMovePosition snakeMovePosition)
         {
             this.snakeMovePosition = snakeMovePosition;
-            transform.position = new Vector3(snakeMovePosition.GetGridPosition(), snakeMovePosition.y);
+            transform.position = new Vector3(snakeMovePosition.GetGridPosition().x, snakeMovePosition.GetGridPosition().y);
 
             float angle;
             switch (snakeMovePosition.getDirection())
@@ -243,6 +271,11 @@ public class Snake : MonoBehaviour
                     break;
             }        
             transform.eulerAngles = new Vector3(0, 0, angle);
+        }
+
+        public Vector2Int GetGridPosition()
+        {
+            return snakeMovePosition.GetGridPosition();
         }
     }
 

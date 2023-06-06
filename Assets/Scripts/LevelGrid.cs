@@ -60,4 +60,26 @@ public class LevelGrid
         }
     }
 
+    /// <summary>
+    /// Если змейка ушла за край, то она телепортируется в противоположеное место.
+    /// </summary>
+    /// <param name="gridPosition"></param>
+    /// <returns></returns>
+    public Vector2Int ValidateGridPosition(Vector2Int gridPosition)
+    {
+        if (gridPosition.x < 0) {
+            gridPosition.x = width - 1;
+        }
+        if (gridPosition.x > width - 1) {
+            gridPosition.x = 0;
+        }
+        if (gridPosition.y < 0) {
+            gridPosition.y = height - 1;
+        }
+        if (gridPosition.y > height - 1) {
+            gridPosition.y = 0;
+        }
+        return gridPosition;
+    }
+
 }

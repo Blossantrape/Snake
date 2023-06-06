@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeHeadSprite: {fileID: 21300000, guid: dee7e10600c678444b7d866ef537e539, type: 3}
-  SnakeBodySprite: {fileID: 21300000, guid: c4973687f485bec45bb2a2966fc12b1d, type: 3}
+  SnakeBodySprite: {fileID: 21300000, guid: 403b33f525f102644bfc36bc75b97409, type: 3}
   foodSprite: {fileID: 21300000, guid: 0029fccbf1ebd434d8e39e7bb63326d8, type: 3}
 --- !u!4 &1600391997
 Transform:
@@ -628,7 +628,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1000
   m_Sprite: {fileID: 21300000, guid: c8cb66859b100374e898037c5ec6bea1, type: 3}
   m_Color: {r: 0.51616645, g: 0.38901743, b: 0.5849056, a: 1}
   m_FlipX: 0
