@@ -45,17 +45,16 @@ public class LevelGrid
     /// Метод проверки позиций змеи и еды между собой.
     /// </summary>
     /// <param name="snakeGridPosition"></param>
-    public bool TrySnakeEatFood(Vector2Int snakeGridPosition)
-    {
-        if (snakeGridPosition == foodGridPosition) // Если позиция змеи и еды одинаковая
-        {
+    public bool TrySnakeEatFood(Vector2Int snakeGridPosition) {
+            // Если позиция змеи и еды одинаковая
+        if (snakeGridPosition == foodGridPosition) {
             Object.Destroy(foodGameObject); // Удаление объекта еды.
             SpawnFood(); // Спавн новой.
-            Debug.Log("Snake ate Food"); // Отладка.
+            GameHandler.AddScore();
+            Debug.Log("Snake ate food"); // Отладка.
             return true;
         }
-        else
-        {
+        else {
             return false;
         }
     }
