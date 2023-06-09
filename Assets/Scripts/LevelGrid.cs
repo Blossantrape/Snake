@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class LevelGrid
 {
-    private Vector2Int foodGridPosition; // Позиция объекта (яблока).
-    private GameObject foodGameObject;
-    private int width; // Высота сетки.
-    private int height; // Ширина сетки.
-    private Snake snake; // Ссылка змеи, пометка.
+    private Vector2Int _foodGridPosition; // Позиция объекта (яблока).
+    private GameObject _foodGameObject;
+    private readonly int _width; // Высота сетки.
+    private readonly int _height; // Ширина сетки.
+    private Snake _snake; // Ссылка змеи, пометка.
     
-    public LevelGrid(int width, int height)
+    public LevelGrid(int _width, int _height)
     {
-        this.width = width;
-        this.height = height;
+        this._width = _width;
+        this._height = _height;
     }
 
-    public void Setup(Snake snake) // Ссылка змеи, пометка.
+    public void Setup(Snake _snake) // Ссылка змеи, пометка.
     {
-        this.snake = snake; // Ссылка змеи, пометка.
+        this._snake = _snake; // Ссылка змеи, пометка.
         SpawnFood();
     }
     
@@ -28,17 +28,17 @@ public class LevelGrid
         
         do { // Сначала идёт генерация, а потом проверка.
             // Генерация местоположения для игрового объекта (яблока).
-            foodGridPosition = new Vector2Int(Random.Range(0,width), Random.Range(0, height));
+            _foodGridPosition = new Vector2Int(Random.Range(0,_width), Random.Range(0, _height));
             // Если позиции совпали, то новая проверка.
             // Если позиция совпадает, то перегрузка IndexOf возвращает индек в списке
             // и цикл повторяется, а если нет, то условия выполняются и 
-        } while (snake.GetFullSnakeGridPositionList().IndexOf(foodGridPosition) != -1);
+        } while (_snake.GetFullSnakeGridPositionList().IndexOf(_foodGridPosition) != -1);
 
         // Создание объекта с именем и компонентом рендера спрайта.
-        foodGameObject = new GameObject("Food", typeof(SpriteRenderer));
-        foodGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.i.foodSprite; // Подкл. компонента.
+        _foodGameObject = new GameObject("Food", typeof(SpriteRenderer));
+        _foodGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.I.foodSprite; // Подкл. компонента.
         // Изменение позиции объекта (яблока).
-        foodGameObject.transform.position = new Vector3Int(foodGridPosition.x, foodGridPosition.y); 
+        _foodGameObject.transform.position = new Vector3Int(_foodGridPosition.x, _foodGridPosition.y); 
     }
     
     /// <summary>
@@ -47,8 +47,8 @@ public class LevelGrid
     /// <param name="snakeGridPosition"></param>
     public bool TrySnakeEatFood(Vector2Int snakeGridPosition) {
             // Если позиция змеи и еды одинаковая
-        if (snakeGridPosition == foodGridPosition) {
-            Object.Destroy(foodGameObject); // Удаление объекта еды.
+        if (snakeGridPosition == _foodGridPosition) {
+            Object.Destroy(_foodGameObject); // Удаление объекта еды.
             SpawnFood(); // Спавн новой.
             GameHandler.AddScore();
             Debug.Log("Snake ate food"); // Отладка.
@@ -67,15 +67,15 @@ public class LevelGrid
     public Vector2Int ValidateGridPosition(Vector2Int gridPosition)
     {
         if (gridPosition.x < 0) {
-            gridPosition.x = width - 1;
+            gridPosition.x = _width - 1;
         }
-        if (gridPosition.x > width - 1) {
+        if (gridPosition.x > _width - 1) {
             gridPosition.x = 0;
         }
         if (gridPosition.y < 0) {
-            gridPosition.y = height - 1;
+            gridPosition.y = _height - 1;
         }
-        if (gridPosition.y > height - 1) {
+        if (gridPosition.y > _height - 1) {
             gridPosition.y = 0;
         }
         return gridPosition;

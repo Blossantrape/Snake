@@ -5,12 +5,13 @@ using TMPro;
 
 public class ScoreWindow : MonoBehaviour
 {
-    private TMP_Text scoreText;
+    private TextMeshProUGUI _scoreText;
+    
     private void Awake() {
-        scoreText = transform.Find("scoreText").GetComponent<TMP_Text>();
+        _scoreText = transform.Find("_scoreText").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update() {
-        scoreText.text = GameHandler.GetScore().ToString();
+        _scoreText.text = GameHandler.GetScore().ToString();
     }
 }

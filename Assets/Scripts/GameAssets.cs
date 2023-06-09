@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameAssets : MonoBehaviour
 {
-    public static GameAssets i;
+    public static GameAssets I;
 
     private void Awake()
     {
-        i = this;
+        I = this;
     }
 
     public Sprite snakeHeadSprite;
-    public Sprite SnakeBodySprite;
+    public Sprite snakeBodySprite;
     public Sprite foodSprite;
 }

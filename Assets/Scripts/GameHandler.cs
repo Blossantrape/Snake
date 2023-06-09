@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 /// <summary>
@@ -6,30 +5,32 @@ using UnityEngine;
 /// </summary>
 public class GameHandler : MonoBehaviour
 {
-    private static GameHandler instance;
+    private static GameHandler _instance;
 
-    private static int score;
+    private static int _score;
     [SerializeField] private Snake snake;
-    private LevelGrid levelGrid;
+    private LevelGrid _levelGrid;
 
     private void Awake() {
-        instance = this;
+        _instance = this;
     }
 
     private void Start() {
         // Параметры берутся из размера используемой сетки (можно Scale from background).
-        levelGrid = new LevelGrid(8, 15);
+        _levelGrid = new LevelGrid(8, 15);
         
-        snake.Setup(levelGrid); // Ссылка змеи, пометка.
-        levelGrid.Setup(snake); // Передача ссылки на змею.
+        snake.Setup(_levelGrid); // Ссылка змеи, пометка.
+        _levelGrid.Setup(snake); // Передача ссылки на змею.
     }
 
+    // Запросить результат счёта
     public static int GetScore() {
-        return score;
+        return _score;
     }
 
+    // Добавить результат счёта
     public static void AddScore() {
-        score += 1;
+        _score += 10000;
         Debug.Log("Add Score");
     }
 }
