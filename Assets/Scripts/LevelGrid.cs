@@ -17,6 +17,12 @@ public class LevelGrid
     public void Setup(Snake _snake) // Ссылка змеи, пометка.
     {
         this._snake = _snake; // Ссылка змеи, пометка.
+
+        /*for (int i = 0; i < 50000; i++)
+        {
+            
+        }*/
+        
         SpawnFood();
     }
     

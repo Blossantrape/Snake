@@ -1,0 +1,31 @@
+using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public static class Loader
+{
+    public enum Scene {
+        GameScene,
+        Loading,
+    }
+
+    private static Action _loaderCallbackAction;
+    
+    public static void Load(Scene scene)
+    {
+        // Лямбда выражение, разобрать его.
+        _loaderCallbackAction = () =>
+        {
+            SceneManager.LoadScene(scene.ToString());
+        };
+            
+        SceneManager.LoadScene(Scene.Loading.ToString());
+    }
+
+    public static void LoaderCallback() {
+        if (_loaderCallbackAction != null) {
+            _loaderCallbackAction();
+            _loaderCallbackAction = null;
+        }
+    }
+}

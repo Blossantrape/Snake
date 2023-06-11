@@ -8,7 +8,7 @@ public class ScoreWindow : MonoBehaviour
     private TextMeshProUGUI _scoreText;
     
     private void Awake() {
-        _scoreText = transform.Find("_scoreText").GetComponent<TextMeshProUGUI>();
+        _scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update() {
