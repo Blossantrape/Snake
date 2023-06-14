@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: 636607b7c14f79a459b7b6400d6f0729
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hand_Down
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 1151
+        width: 1262
+        height: 1508
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e34d26a9b3304642af09cd89326fa9c
+      internalID: -573590462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hend_Rigt
+      rect:
+        serializedVersion: 2
+        x: 5992
+        y: 1225
+        width: 1156
+        height: 1434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b1c2afe97f2b84d8e53db50b17b510
+      internalID: -1790579607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_Zoom
+      rect:
+        serializedVersion: 2
+        x: 8635
+        y: 1304
+        width: 1319
+        height: 1355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a3e78de8e909c4ab313a9ca8f98c39
+      internalID: -1250504539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_Touch
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 579
+        width: 1316
+        height: 1456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1be7d5fc4550a84b98cb5a07349ff48
+      internalID: 1748941599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_MoveToUpAndDown
+      rect:
+        serializedVersion: 2
+        x: 9548
+        y: 10
+        width: 1317
+        height: 1217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310851c909b93104bbc0aa9c4cf34533
+      internalID: 464920900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_Up
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 0
+        width: 1338
+        height: 1483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f84929877914f4ca65c6e8dd889e8f
+      internalID: -1945688602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_Left
+      rect:
+        serializedVersion: 2
+        x: 4666
+        y: 0
+        width: 1399
+        height: 1471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e789c77824720c40bc8dc450ec9815b
+      internalID: -1310021835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand_Distance
+      rect:
+        serializedVersion: 2
+        x: 7336
+        y: 16
+        width: 1336
+        height: 1477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4041c01fc7b9e4b9cd3e7f6c2528db
+      internalID: 109174153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hand_Distance: 109174153
+      Hand_Down: -573590462
+      Hand_Left: -1310021835
+      Hand_MoveToUpAndDown: 464920900
+      Hand_Touch: 1748941599
+      Hand_Up: -1945688602
+      Hand_Zoom: -1250504539
+      Hend_Rigt: -1790579607
+      awd_10: -1742260851
+      awd_11: -1840414704
+      awd_12: -292332052
+      awd_13: -456846003
+      awd_14: 1616588836
+      awd_15: 418313539
+      awd_16: 459545179
+      awd_17: -982248710
+      awd_18: -1735535831
+      awd_19: 1969738602
+      awd_20: 198613409
+      awd_21: 1691362433
+      awd_23: 1827265169
+      awd_24: -1060272139
+      awd_25: -147690297
+      awd_26: -16955113
+      awd_27: -666822929
+      awd_28: 2002124371
+      awd_3: -26687718
+      awd_32: -892744499
+      awd_33: 1571922537
+      awd_34: -1862343484
+      awd_35: 547724951
+      awd_36: -647741296
+      awd_37: -1249427789
+      awd_38: 1650046378
+      awd_39: 2003596543
+      awd_4: -1707189153
+      awd_40: -1791133820
+      awd_41: 577509007
+      awd_42: -1695804413
+      awd_43: 68899961
+      awd_44: 855779416
+      awd_45: -705672989
+      awd_46: 86330731
+      awd_47: -960054220
+      awd_48: -491570918
+      awd_49: -1397602111
+      awd_50: -1185893559
+      awd_51: -1466785816
+      awd_52: -1209740505
+      awd_53: -1025064019
+      awd_54: 805747773
+      awd_55: 1253092805
+      awd_56: 2006956331
+      awd_57: -1552156550
+      awd_58: -1357812871
+      awd_59: 289763823
+      awd_6: -709058588
+      awd_60: 1087341293
+      awd_61: 1051258381
+      awd_62: 1494863294
+      awd_63: -1341756048
+      awd_64: 2042872254
+      awd_65: -658831747
+      awd_66: 2093034082
+      awd_67: 2016269476
+      awd_68: 476959533
+      awd_69: 1024717430
+      awd_7: 1033505018
+      awd_70: -1993375863
+      awd_71: 439500907
+      awd_72: 558444050
+      awd_73: -2041073650
+      awd_74: -1024435062
+      awd_75: -1465827370
+      awd_76: -929229205
+      awd_77: 1266301679
+      awd_78: -499377637
+      awd_79: 780952115
+      awd_8: -1607544188
+      awd_80: 833133082
+      awd_81: 1116006572
+      awd_82: -1235888467
+      awd_83: 1472146596
+      awd_84: -2033129536
+      awd_85: 1852965875
+      awd_86: -1304804731
+      awd_87: -321714711
+      awd_88: 803755963
+      awd_89: -773906219
+      awd_9: 778753433
+      awd_90: 1204425768
+      awd_91: -225882541
+      awd_92: 1448592236
+      awd_93: 1767441915
+      awd_94: -570755067
+      awd_95: 602124877
+      awd_96: -1629386270
+      awd_97: 1400276920
+      awd_98: -2140038809
+      awd_99: -1350714690
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

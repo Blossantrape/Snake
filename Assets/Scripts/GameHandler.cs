@@ -41,4 +41,8 @@ public class GameHandler : MonoBehaviour
         _score += 1;
         Debug.Log("Add Score");
     }
+
+    public static void SnakeDied() {
+        GameOverWindow.ShowStatic();
+    }
 }
