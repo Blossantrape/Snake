@@ -5,9 +5,11 @@ public class MainMenuWindow : MonoBehaviour
 {
     private void Awake()
     {
-        // кастыль ебаный
+        /*// кастыль ебаный
         transform.Find("playBtn"); //clickfund = Loader.Load(Loader.Scene.GameScene);
         
-        transform.Find("quitBtn"); //clickfund = Application.Quit();
+        transform.Find("quitBtn"); //clickfund = Application.Quit();*/
+        
+        
     }
 }
