@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215721943}
   - component: {fileID: 215721944}
+  - component: {fileID: 215721945}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: Untagged
@@ -168,7 +169,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69cf78190bf6a3046ac5b09e30083308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _widthGh: 5
+  _heightGh: 10
   snake: {fileID: 1601906277}
+--- !u!114 &215721945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215721942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e089af01bdf564ba8b17ec4287d39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269424915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +2000,7 @@ MonoBehaviour:
   snakeHeadSprite: {fileID: 21300000, guid: dee7e10600c678444b7d866ef537e539, type: 3}
   snakeBodySprite: {fileID: 21300000, guid: 403b33f525f102644bfc36bc75b97409, type: 3}
   foodSprite: {fileID: 21300000, guid: 0029fccbf1ebd434d8e39e7bb63326d8, type: 3}
+  boxSprite: {fileID: 21300000, guid: a7d0e780b7831534ebec9ff77cbf991e, type: 3}
 --- !u!4 &1600391997
 Transform:
   m_ObjectHideFlags: 0

@@ -4,8 +4,8 @@ public class LevelGrid
 {
     private Vector2Int _foodGridPosition; // Позиция объекта (яблока).
     private GameObject _foodGameObject;
-    private readonly int _width; // Высота сетки.
-    private readonly int _height; // Ширина сетки.
+    [HideInInspector] public readonly int _width; // Высота сетки.
+    [HideInInspector] public readonly int _height; // Ширина сетки.
     private Snake _snake; // Ссылка змеи, пометка.
     
     public LevelGrid(int _width, int _height)
@@ -17,11 +17,6 @@ public class LevelGrid
     public void Setup(Snake _snake) // Ссылка змеи, пометка.
     {
         this._snake = _snake; // Ссылка змеи, пометка.
-
-        /*for (int i = 0; i < 50000; i++)
-        {
-            
-        }*/
         
         SpawnFood();
     }
