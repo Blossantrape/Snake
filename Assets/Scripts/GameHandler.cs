@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 /// <summary>
@@ -14,6 +13,10 @@ public class GameHandler : MonoBehaviour
     
     [SerializeField] private Snake snake;
     private LevelGrid _levelGrid;
+    
+    // Box
+    private Box _box;
+    private Transform _parentTransform;
 
     private void Awake() {
         _instance = this;
@@ -27,7 +30,11 @@ public class GameHandler : MonoBehaviour
         snake.Setup(_levelGrid); // Ссылка змеи, пометка.
         _levelGrid.Setup(snake); // Передача ссылки на змею.
         
-        // этот еблан опять тут своё приписал, потом добавить загрузку сцены.
+        // Box
+        // Добавление компонента к объекту.
+        _box = gameObject.AddComponent<Box>();
+        // Создание границы игрового поля.
+        _box.CreateBorder(_widthGh, _heightGh);
     }
 
     private void Update()
