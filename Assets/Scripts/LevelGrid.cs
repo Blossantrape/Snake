@@ -7,6 +7,9 @@ public class LevelGrid
     [HideInInspector] public readonly int _width; // Высота сетки.
     [HideInInspector] public readonly int _height; // Ширина сетки.
     private Snake _snake; // Ссылка змеи, пометка.
+
+    private Transform _parentTransform;
+    private Camera _mainCamera;
     
     public LevelGrid(int _width, int _height)
     {
@@ -19,6 +22,11 @@ public class LevelGrid
         this._snake = _snake; // Ссылка змеи, пометка.
         
         SpawnFood();
+    }
+
+    public void SetParent(Transform parent)
+    {
+        _parentTransform = parent;
     }
     
     /// <summary>

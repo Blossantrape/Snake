@@ -18,17 +18,23 @@ public class GameHandler : MonoBehaviour
     private Box _box;
     private Transform _parentTransform;
 
+    //[HideInInspector] private Camera _mainCamera;
+    private Camera _mainCamera;
+
     private void Awake() {
         _instance = this;
+        _mainCamera = Camera.main;
         InitializeStatic();
     }
 
     private void Start() {
         // Параметры берутся из размера используемой сетки (можно Scale from background).
         _levelGrid = new LevelGrid(_widthGh, _heightGh);
+        _levelGrid.SetParent(transform);
         
         snake.Setup(_levelGrid); // Ссылка змеи, пометка.
         _levelGrid.Setup(snake); // Передача ссылки на змею.
+        AdjustCameraToGrid();
         
         // Box
         // Добавление компонента к объекту.
@@ -47,6 +53,30 @@ public class GameHandler : MonoBehaviour
                 GameHandler.PauseGame();
             }
         }
+    }
+
+    /// <summary>
+    /// Регулирование камеры по сетке.
+    /// </summary>
+    private void AdjustCameraToGrid()
+    {
+        if (_mainCamera == null)
+        {
+            Debug.LogWarning("Main camera not found.");
+            return;
+        }
+
+        float gridWidth = _levelGrid._width;
+        float gridHeight = _levelGrid._height;
+
+        float aspectRatio = (float) Screen.width / Screen.height;
+        float cameraHeight = gridHeight + 2f;
+        float cameraWidth = cameraHeight * aspectRatio;
+
+        _mainCamera.orthographicSize = cameraHeight / 2f;
+
+        Vector3 cameraPosition = new Vector3(gridWidth / 2f, gridHeight / 2f, -10f);
+        _mainCamera.transform.position = cameraPosition;
     }
 
     private static void InitializeStatic() {
