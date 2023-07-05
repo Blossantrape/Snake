@@ -6,14 +6,13 @@ public class Box : MonoBehaviour
 
     private Vector2Int _boxGridPosition;
     private GameObject _boxGameObject;
-    
+
     private LevelGrid _levelGrid;
     private GameHandler _gameHandler;
 
     private void Awake()
     {
         _instance = this;
-        
     }
 
     private void Start()
@@ -22,7 +21,7 @@ public class Box : MonoBehaviour
         int heightBox = _levelGrid._height;
         /*CreateBorder(widthBox, heightBox);#1#*/
     }
-    
+
     public void CreateBorder(int widthBox, int heightBox)
     {
         GameObject borderContainer = new GameObject("borderContainer");
@@ -31,14 +30,14 @@ public class Box : MonoBehaviour
         for (int y = -1; y <= heightBox; y++)
         {
             SpawnBox(-1, y, borderContainer);
-            SpawnBox(widthBox/* - 1*/, y, borderContainer);
+            SpawnBox(widthBox /* - 1*/, y, borderContainer);
         }
-        
+
         // Создание горизонтальной стены.
         for (int x = -1; x <= widthBox; x++)
         {
             SpawnBox(x, -1, borderContainer);
-            SpawnBox(x, heightBox/* - 1*/, borderContainer);
+            SpawnBox(x, heightBox /* - 1*/, borderContainer);
         }
     }
 

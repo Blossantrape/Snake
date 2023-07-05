@@ -8,8 +8,8 @@ public class GameHandler : MonoBehaviour
     private static GameHandler _instance;
 
     private static int _score = 0; // Счёт игры
-    [SerializeField] private int _widthGh = 5;
-    [SerializeField] private int _heightGh = 10;
+    private readonly int _widthGh = 5;
+    private readonly int _heightGh = 10;
     
     [SerializeField] private Snake snake;
     private LevelGrid _levelGrid;
@@ -19,22 +19,22 @@ public class GameHandler : MonoBehaviour
     private Transform _parentTransform;
 
     //[HideInInspector] private Camera _mainCamera;
-    private Camera _mainCamera;
+    //private Camera _mainCamera;
 
     private void Awake() {
         _instance = this;
-        _mainCamera = Camera.main;
+        //_mainCamera = Camera.main;
         InitializeStatic();
     }
 
     private void Start() {
         // Параметры берутся из размера используемой сетки (можно Scale from background).
         _levelGrid = new LevelGrid(_widthGh, _heightGh);
-        _levelGrid.SetParent(transform);
+        //_levelGrid.SetParent(transform);
         
         snake.Setup(_levelGrid); // Ссылка змеи, пометка.
         _levelGrid.Setup(snake); // Передача ссылки на змею.
-        AdjustCameraToGrid();
+        //AdjustCameraToGrid();
         
         // Box
         // Добавление компонента к объекту.
@@ -58,7 +58,7 @@ public class GameHandler : MonoBehaviour
     /// <summary>
     /// Регулирование камеры по сетке.
     /// </summary>
-    private void AdjustCameraToGrid()
+    /*private void AdjustCameraToGrid()
     {
         if (_mainCamera == null)
         {
@@ -77,7 +77,7 @@ public class GameHandler : MonoBehaviour
 
         Vector3 cameraPosition = new Vector3(gridWidth / 2f, gridHeight / 2f, -10f);
         _mainCamera.transform.position = cameraPosition;
-    }
+    }*/
 
     private static void InitializeStatic() {
         _score = 0;
