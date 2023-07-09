@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class GameAssets : MonoBehaviour
 {
@@ -14,4 +14,13 @@ public class GameAssets : MonoBehaviour
     public Sprite snakeBodySprite;
     public Sprite foodSprite;
     public Sprite boxSprite;
+
+    public SoundAudioClip[] soundAudioClipArray;
+    
+    [Serializable]
+    public class SoundAudioClip
+    {
+        public SoundManager.Sound sound;
+        public AudioClip audioClip;
+    }
 }

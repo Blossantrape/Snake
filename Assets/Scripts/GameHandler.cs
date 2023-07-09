@@ -8,8 +8,8 @@ public class GameHandler : MonoBehaviour
     private static GameHandler _instance;
 
     private static int _score = 0; // Счёт игры
-    private readonly int _widthGh = 5;
-    private readonly int _heightGh = 10;
+    private readonly int _widthGh = 16;
+    private readonly int _heightGh = 22;
     
     [SerializeField] private Snake snake;
     private LevelGrid _levelGrid;

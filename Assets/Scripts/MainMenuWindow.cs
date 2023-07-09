@@ -15,6 +15,8 @@ public class MainMenuWindow : MonoBehaviour
         transform.Find("howToPlayInside").GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         // Тут мы в дочерни ищем кнопку и через компонент кнопки по клику вызываем нужный функианал.
         transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => Loader.Load(Loader.Scene.GameScene));
+        transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
+        transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.AddButtonSound());
         
         transform.Find("buttonsMainMenu").Find("howToPlayBtn").GetComponent<Button>().onClick.AddListener(() => ShowSub(Sub.HowToPlay));
         

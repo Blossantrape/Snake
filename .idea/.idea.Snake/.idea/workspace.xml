@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1b4fd1c3-7a29-4c9f-ac83-fa60392ec10a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Snake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,19 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameAssets.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/GameHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/LevelGrid.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/LevelGrid.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/LevelGrid.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Developer/Repositories/RepositoryUnity/Snake/Assets/Scripts/LevelGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGrid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Loader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoaderCallback.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Snake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -177,7 +170,9 @@
       <workItem from="1688467206109" duration="194000" />
       <workItem from="1688468122545" duration="1470000" />
       <workItem from="1688554146207" duration="1592000" />
-      <workItem from="1688555853087" duration="1343000" />
+      <workItem from="1688555853087" duration="3902000" />
+      <workItem from="1688810563598" duration="645000" />
+      <workItem from="1688888152109" duration="4503000" />
     </task>
     <servers />
   </component>

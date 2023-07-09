@@ -103,6 +103,8 @@ public class Snake : MonoBehaviour
         {
             _gridMoveTimer -= _gridMoveTimerMax; // Не понял зачем.
 
+            SoundManager.PlaySound(SoundManager.Sound.SnakeMove);
+
             SnakeMovePosition previousSnakeMovePosition = null;
             if (_snakeMovePositionList.Count > 0)
             {
@@ -130,6 +132,7 @@ public class Snake : MonoBehaviour
             {
                 _snakeBodySize++;
                 CreateSnakeBody();
+                SoundManager.PlaySound(SoundManager.Sound.SnakeEat);
             }
 
             if (_snakeMovePositionList.Count >= _snakeBodySize + 1) // Если список больше размера змеи.
@@ -150,6 +153,7 @@ public class Snake : MonoBehaviour
                     Debug.Log("YOU DEAD!");
                     _state = State.Dead;
                     GameHandler.SnakeDied();
+                    SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
                 }
             }
             
