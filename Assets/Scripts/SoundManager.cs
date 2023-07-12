@@ -38,6 +38,6 @@ public static class SoundManager
 
     public static void AddButtonSound(this Button button)
     {
-        button.onClick += () => SoundManager.PlaySound(Sound.ButtonClick);
+        button.onClick.AddListener(() => SoundManager.PlaySound(Sound.ButtonClick));
     }
 }
