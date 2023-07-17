@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using General;
 using UnityEngine;
 
 public class Snake : MonoBehaviour

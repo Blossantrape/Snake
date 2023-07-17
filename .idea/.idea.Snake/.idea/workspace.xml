@@ -5,18 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b4fd1c3-7a29-4c9f-ac83-fa60392ec10a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameLoader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/General.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Menu/boubds3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Menu/boubds3.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/boubds3.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/boubds3.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/snakeDead2.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/snakeDead2.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/field_theme_1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/field_theme_1.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/field_theme_2.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/field_theme_2.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/night_theme_1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/night_theme_1.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/sea_theme_1.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/sea_theme_1.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/sea_theme_23.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/sea_theme_23.ogg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Box.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Box.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Box.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameAssets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameAssets.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameAssets.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameOverWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/LevelGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGrid.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/LevelGrid.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLoader/Loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Loader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLoader/Loader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoaderCallback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLoader/LoaderCallback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoaderCallback.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLoader/LoaderCallback.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Snake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Snake.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Snake.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +68,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Snake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a2912c64f764486f8939a6113e3b10af14e18/aa/363a1b3e/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,19 +89,20 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.42410713&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\tolik\\AppData\\Local\\Symbols\\src&quot;
+      &quot;C:\\Users\\3Saom\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\3Saom\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\3Saom\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -182,6 +213,11 @@
       <workItem from="1689147549998" duration="1218000" />
       <workItem from="1689160138103" duration="6079000" />
       <workItem from="1689506023750" duration="4612000" />
+      <workItem from="1689589057157" duration="194000" />
+      <workItem from="1689589277101" duration="278000" />
+      <workItem from="1689589682154" duration="85000" />
+      <workItem from="1689590646034" duration="5457000" />
+      <workItem from="1689596738418" duration="8438000" />
     </task>
     <servers />
   </component>
