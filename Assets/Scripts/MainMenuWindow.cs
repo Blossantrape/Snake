@@ -16,13 +16,20 @@ public class MainMenuWindow : MonoBehaviour
         // Тут мы в дочерни ищем кнопку и через компонент кнопки по клику вызываем нужный функианал.
         transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => Loader.Load(Loader.Scene.GameScene));
         transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
-        transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.AddButtonSound());
+        //transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.AddButtonSound());
+        
+        Button playButton = transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>();
+        playButton.onClick.AddListener(() => SoundManager.AddButtonSound(playButton));
+
         
         transform.Find("buttonsMainMenu").Find("howToPlayBtn").GetComponent<Button>().onClick.AddListener(() => ShowSub(Sub.HowToPlay));
+        transform.Find("buttonsMainMenu").Find("howToPlayBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
         
         transform.Find("buttonsMainMenu").Find("quitBtn").GetComponent<Button>().onClick.AddListener(() => Application.Quit());
+        transform.Find("buttonsMainMenu").Find("quitBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
         
         transform.Find("howToPlayInside").Find("backBtn").GetComponent<Button>().onClick.AddListener(() => ShowSub(Sub.MainMenu));
+        transform.Find("howToPlayInside").Find("backBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
         
         ShowSub(Sub.MainMenu);
     }

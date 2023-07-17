@@ -1999,6 +1999,25 @@ MonoBehaviour:
   snakeBodySprite: {fileID: 21300000, guid: 403b33f525f102644bfc36bc75b97409, type: 3}
   foodSprite: {fileID: 21300000, guid: 0029fccbf1ebd434d8e39e7bb63326d8, type: 3}
   boxSprite: {fileID: 21300000, guid: a7d0e780b7831534ebec9ff77cbf991e, type: 3}
+  soundAudioClipArray:
+  - sound: 0
+    audioClip: {fileID: 8300000, guid: e1f7494ee773de0418352f8365ca4829, type: 3}
+  - sound: 1
+    audioClip: {fileID: 8300000, guid: 195b48d42ae02f647971ece2c1bcad92, type: 3}
+  - sound: 2
+    audioClip: {fileID: 8300000, guid: b429c15cc72896b4f9a5e5de8b206219, type: 3}
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: 9729ade374ab58747879a34ddc5ba932, type: 3}
+  - sound: 0
+    audioClip: {fileID: 0}
+  - sound: 0
+    audioClip: {fileID: 0}
+  - sound: 0
+    audioClip: {fileID: 0}
+  - sound: 0
+    audioClip: {fileID: 0}
+  - sound: 0
+    audioClip: {fileID: 0}
 --- !u!4 &1600391997
 Transform:
   m_ObjectHideFlags: 0

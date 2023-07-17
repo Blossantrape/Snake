@@ -19,7 +19,10 @@ public static class SoundManager
     public static void PlaySound(Sound sound)
     {
         GameObject soundGameObject = new GameObject("Sounds");
+        
         AudioSource audioSource = soundGameObject.GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = GetAudioClip(sound);
         audioSource.PlayOneShot(GetAudioClip(sound));
     }
 

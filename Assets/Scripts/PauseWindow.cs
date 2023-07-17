@@ -13,10 +13,14 @@ public class PauseWindow : MonoBehaviour
         transform.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         transform.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
         transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => GameHandler.ResumeGame());
-        
+        transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
+
         transform.Find("retryBtnPW").GetComponent<Button>().onClick.AddListener(() => Loader.Load(Loader.Scene.GameScene));
-        
+        transform.Find("retryBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
+
         transform.Find("mainMenuBtnPW").GetComponent<Button>().onClick.AddListener(() => Loader.Load(Loader.Scene.MainMenu));
+        transform.Find("mainMenuBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
+
         
         Hide();
     }
