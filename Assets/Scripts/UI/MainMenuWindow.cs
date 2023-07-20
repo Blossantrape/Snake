@@ -20,8 +20,8 @@ public class MainMenuWindow : MonoBehaviour
         transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
         //transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>().onClick.AddListener(() => SoundManager.AddButtonSound());
         
-        Button playButton = transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>();
-        playButton.onClick.AddListener(() => SoundManager.AddButtonSound(playButton));
+        /*Button playButton = transform.Find("buttonsMainMenu").Find("playBtn").GetComponent<Button>();
+        playButton.onClick.AddListener(() => SoundManager.AddButtonSound(playButton));*/
 
         
         transform.Find("buttonsMainMenu").Find("howToPlayBtn").GetComponent<Button>().onClick.AddListener(() => ShowSub(Sub.HowToPlay));

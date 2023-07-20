@@ -5,29 +5,60 @@ namespace General
 {
     public static class SoundManager
     {
+        private static AudioSource _audioSource = null;
         public enum Sound
         {
             SnakeMove, //+
             SnakeDie, // Dead+
             SnakeEat, //+
-            ButtonClick, 
+            ButtonClick, // +
             // ButtonOver, // Хуета, убрать. Для наведения на кнопку.
             BackGroundMenu, //+
             BackGroundGame, //+
-            RestartGame, 
-            GameOver,
+            RestartGame, //+
+            GameOver,  //+
+        }
+        
+        private static void Initialize()
+        {
+            // Ищем объект "Sounds" на сцене. Если его нет, создаем новый.
+            GameObject soundGameObject = GameObject.Find("Sounds");
+            if (soundGameObject == null)
+            {
+                soundGameObject = new GameObject("Sounds");
+            }
+
+            // Получаем или добавляем компонент AudioSource к объекту "Sounds"
+            _audioSource = soundGameObject.GetComponent<AudioSource>();
+            if (_audioSource == null)
+            {
+                _audioSource = soundGameObject.AddComponent<AudioSource>();
+                _audioSource.playOnAwake = false;
+                
+            }
+
+            // Помечаем объект "Sounds" чтобы он не уничтожался при переходе сцен
+            Object.DontDestroyOnLoad(soundGameObject);
         }
     
         public static void PlaySound(Sound sound)
         {
+            // Проверяем, что AudioSource был инициализирован
+            if (_audioSource == null)
+            {
+                // Если _audioSource еще не инициализирован, вызываем Initialize()
+                Initialize();
+            }
+            
             GameObject soundGameObject = new GameObject("Sounds");
-            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+            //AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
             soundGameObject.GetComponent<AudioSource>();
-            audioSource.playOnAwake = false;
-            audioSource.clip = GetAudioClip(sound);
-            audioSource.PlayOneShot(GetAudioClip(sound));
+            //_audioSource.playOnAwake = false;
+            _audioSource.clip = GetAudioClip(sound);
+            _audioSource.PlayOneShot(GetAudioClip(sound));
         
-            Object.Destroy(soundGameObject, audioSource.clip.length); // Удаление после поспросизведения.
+            Object.Destroy(soundGameObject, _audioSource.clip.length); // Удаление после поспросизведения.
+            //soundGameObject.AddComponent<MyDontDestroyOnLoad>(); // Не позволяет объекту удалиться при переходе сцен.
         }
 
         private static AudioClip GetAudioClip(Sound sound)

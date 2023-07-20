@@ -155,6 +155,7 @@ public class Snake : MonoBehaviour
                     _state = State.Dead;
                     GameHandler.SnakeDied();
                     SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
+                    SoundManager.PlaySound(SoundManager.Sound.GameOver);
                 }
             }
             

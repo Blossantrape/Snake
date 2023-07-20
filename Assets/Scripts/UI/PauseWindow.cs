@@ -19,7 +19,7 @@ namespace UI
             transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
             transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => GameHandler.ResumeGame());
 
-            transform.Find("retryBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
+            transform.Find("retryBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.RestartGame));
             transform.Find("retryBtnPW").GetComponent<Button>().onClick.AddListener(() => Loader.Load(Loader.Scene.GameScene));
             
             transform.Find("mainMenuBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
