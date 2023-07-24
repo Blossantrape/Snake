@@ -1,18 +1,42 @@
-using System;
 using General;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 
-public class ScoreWindow : MonoBehaviour
+namespace UI
 {
-    private TextMeshProUGUI _scoreText;
-    
-    private void Awake() {
-        _scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TextMeshProUGUI>();
-    }
+    public class ScoreWindow : MonoBehaviour
+    {
+        private static ScoreWindow _instance;
+        
+        private TextMeshProUGUI _scoreText;
 
-    private void Update() {
-        _scoreText.text = GameHandler.GetScore().ToString();
+        private void Awake()
+        {
+            _instance = this;
+            _scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TextMeshProUGUI>();
+
+            Score.OnHighscoreChanged += Score_OnHighscoreChanged;
+            UpdateHighscore();
+        }
+
+        private void Score_OnHighscoreChanged(object sender, System.EventArgs e)
+        {
+            UpdateHighscore();
+        }
+
+        private void Update() {
+            _scoreText.text = Score.GetScore().ToString();
+        }
+
+        private void UpdateHighscore()
+        {
+            int highscore = Score.GetHighscore();
+            transform.Find("highscoreText").GetComponent<TextMeshProUGUI>().text = "HIGHSCORE\n" + highscore.ToString();
+        }
+
+        public static void HideStatic()
+        {
+            _instance.gameObject.SetActive(false);
+        }
     }
 }

@@ -60,7 +60,7 @@ public class LevelGrid
         if (snakeGridPosition == _foodGridPosition) {
             Object.Destroy(_foodGameObject); // Удаление объекта еды.
             SpawnFood(); // Спавн новой.
-            GameHandler.AddScore();
+            Score.AddScore();
             Debug.Log("Snake ate food"); // Отладка.
             return true;
         }

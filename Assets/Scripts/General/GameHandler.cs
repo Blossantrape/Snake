@@ -12,7 +12,7 @@ namespace General
     {
         private static GameHandler _instance;
 
-        private static int _score = 0; // Счёт игры
+        
         private readonly int _widthGh = 16;
         private readonly int _heightGh = 22;
     
@@ -32,7 +32,12 @@ namespace General
         private void Awake() {
             _instance = this;
             //_mainCamera = Camera.main;
-            InitializeStatic();
+            Score.InitializeStatic();
+            Time.timeScale = 1f;
+
+            /*PlayerPrefs.SetInt("highscore", 100);
+            PlayerPrefs.Save();
+            Debug.Log(PlayerPrefs.GetInt("highscore"));*/
         }
 
         private void Start() {
@@ -122,23 +127,13 @@ namespace General
             return SceneManager.GetActiveScene().name == "GameScene";
         }
 
-        private static void InitializeStatic() {
-            _score = 0;
-        }
-    
-        // Запросить результат счёта
-        public static int GetScore() {
-            return _score;
-        }
+        
 
-        // Добавить результат счёта
-        public static void AddScore() {
-            _score += 1;
-            Debug.Log("Add Score");
-        }
-
-        public static void SnakeDied() {
-            GameOverWindow.ShowStatic();
+        public static void SnakeDied()
+        {
+            bool isNewHighscore = Score.TrySetNewHighscore();
+            GameOverWindow.ShowStatic(isNewHighscore);
+            ScoreWindow.HideStatic();
         }
 
         public static void ResumeGame()
