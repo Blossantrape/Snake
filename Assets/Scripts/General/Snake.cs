@@ -66,21 +66,21 @@ public class Snake : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow)) // Управление стрелками.
+        if (Input.GetKeyDown(KeyCode.W)) // Управление.
         {
             if (_gridMoveDirection != Direction.Down) // Не позволяет поворачиваться на 180 градусов.
             {
                 _gridMoveDirection = Direction.Up;
             }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             if (_gridMoveDirection != Direction.Up) // Не позволяет поворачиваться на 180 градусов.
             {
                 _gridMoveDirection = Direction.Down;
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             if (_gridMoveDirection != Direction.Right) // Не позволяет поворачиваться на 180 градусов.
             {
@@ -88,7 +88,7 @@ public class Snake : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             if (_gridMoveDirection != Direction.Left) // Не позволяет поворачиваться на 180 градусов.
             {
@@ -104,6 +104,7 @@ public class Snake : MonoBehaviour
         {
             _gridMoveTimer -= _gridMoveTimerMax; // Не понял зачем.
 
+            //SoundManager.SetAudioMixerGroup(GameAssets.I.snakeMoveMixerGroup);
             SoundManager.PlaySound(SoundManager.Sound.SnakeMove);
 
             SnakeMovePosition previousSnakeMovePosition = null;
@@ -133,6 +134,7 @@ public class Snake : MonoBehaviour
             {
                 _snakeBodySize++;
                 CreateSnakeBody();
+                //SoundManager.SetAudioMixerGroup(GameAssets.I.sfxMixerGroup);
                 SoundManager.PlaySound(SoundManager.Sound.SnakeEat);
             }
 
@@ -154,6 +156,7 @@ public class Snake : MonoBehaviour
                     Debug.Log("YOU DEAD!");
                     _state = State.Dead;
                     GameHandler.SnakeDied();
+                    //SoundManager.SetAudioMixerGroup(GameAssets.I.sfxMixerGroup);
                     SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
                     SoundManager.PlaySound(SoundManager.Sound.GameOver);
                 }

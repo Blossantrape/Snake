@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -7,14 +8,15 @@ namespace General
     public static class SoundManager
     {
         private static AudioSource _audioSource = null;
-        private static AudioMixerGroup _sfxMixerGroup = null;
+        
+        private static Dictionary<AudioMixerGroup, AudioSource> _audioSources = new Dictionary<AudioMixerGroup, AudioSource>();
+        
         public enum Sound
         {
             SnakeMove, //+
             SnakeDie, // Dead+
             SnakeEat, //+
             ButtonClick, // +
-            // ButtonOver, // Хуета, убрать. Для наведения на кнопку.
             BackGroundMenu, //+
             BackGroundGame, //+
             RestartGame, //+
@@ -23,52 +25,62 @@ namespace General
         
         private static void Initialize()
         {
-            // Ищем объект "Sounds" на сцене. Если его нет, создаем новый.
-            GameObject soundGameObject = GameObject.Find("Sounds");
-            if (soundGameObject == null)
-            {
-                soundGameObject = new GameObject("Sounds");
-            }
-
-            // Получаем или добавляем компонент AudioSource к объекту "Sounds"
-            _audioSource = soundGameObject.GetComponent<AudioSource>();
             if (_audioSource == null)
             {
+                GameObject soundGameObject = new GameObject("Sounds");
                 _audioSource = soundGameObject.AddComponent<AudioSource>();
-                _audioSource.outputAudioMixerGroup = _sfxMixerGroup;
+                _audioSource.outputAudioMixerGroup = GameAssets.I.sfxMixerGroup;
                 _audioSource.playOnAwake = false;
-                
+                Object.DontDestroyOnLoad(soundGameObject);
             }
-
-            // Помечаем объект "Sounds" чтобы он не уничтожался при переходе сцен
-            Object.DontDestroyOnLoad(soundGameObject);
-        }
-
-        public static void SetAudioMixerGroup(AudioMixerGroup mixerGroup)
-        {
-            _sfxMixerGroup = mixerGroup;
         }
     
         public static void PlaySound(Sound sound)
         {
-            // Проверяем, что AudioSource был инициализирован
-            if (_audioSource == null)
-            {
-                // Если _audioSource еще не инициализирован, вызываем Initialize()
-                Initialize();
-            }
-            
-            GameObject soundGameObject = new GameObject("Sounds");
-            //AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-            soundGameObject.GetComponent<AudioSource>();
-            //_audioSource.playOnAwake = false;
-            _audioSource.clip = GetAudioClip(sound);
-            _audioSource.PlayOneShot(GetAudioClip(sound));
-        
-            Object.Destroy(soundGameObject, _audioSource.clip.length); // Удаление после поспросизведения.
-            //soundGameObject.AddComponent<MyDontDestroyOnLoad>(); // Не позволяет объекту удалиться при переходе сцен.
+            AudioMixerGroup mixerGroup = GetAudioMixerGroup(sound);
+
+            // Получаем соответствующий AudioSource для этой группы
+            AudioSource audioSource = GetAudioSourceForGroup(mixerGroup);
+
+            // Воспроизводим звук
+            audioSource.clip = GetAudioClip(sound);
+            audioSource.PlayOneShot(audioSource.clip);
         }
 
+        private static AudioMixerGroup GetAudioMixerGroup(Sound sound)
+        {
+            switch (sound)
+            {
+                case Sound.ButtonClick:
+                case Sound.SnakeDie:
+                case Sound.SnakeEat:
+                case Sound.RestartGame:
+                case Sound.GameOver:
+                    return GameAssets.I.sfxMixerGroup;
+                case Sound.BackGroundMenu:
+                case Sound.BackGroundGame:
+                    return GameAssets.I.musicMixerGroup;
+                default:
+                    return GameAssets.I.snakeMoveMixerGroup;
+            }
+        }
+        
+        private static AudioSource GetAudioSourceForGroup(AudioMixerGroup mixerGroup)
+        {
+            if (!_audioSources.TryGetValue(mixerGroup, out AudioSource audioSource))
+            {
+                GameObject soundGameObject = new GameObject("Sound-" + mixerGroup.name);
+                audioSource = soundGameObject.AddComponent<AudioSource>();
+                audioSource.outputAudioMixerGroup = mixerGroup;
+                audioSource.playOnAwake = false;
+                Object.DontDestroyOnLoad(soundGameObject);
+
+                _audioSources[mixerGroup] = audioSource;
+            }
+
+            return audioSource;
+        }
+        
         private static AudioClip GetAudioClip(Sound sound)
         {
             foreach (GameAssets.SoundAudioClip soundAudioClip in GameAssets.I.soundAudioClipArray)
@@ -85,6 +97,32 @@ namespace General
         public static void AddButtonSound(this Button button)
         {
             button.onClick.AddListener(() => SoundManager.PlaySound(Sound.ButtonClick));
+        }
+        
+        public static void PlayMainMenuMusic()
+        {
+            AudioClip mainMenuMusicClip = GameAssets.I.soundAudioClipArray[4].audioClip;
+            GameObject mainMenuMusicObject = new GameObject("MainMenuBackgroundMusic");
+            AudioSource mainMenuMusicSource = mainMenuMusicObject.AddComponent<AudioSource>();
+            mainMenuMusicSource.clip = mainMenuMusicClip;
+            mainMenuMusicSource.loop = true;
+            mainMenuMusicSource.outputAudioMixerGroup = GameAssets.I.musicMixerGroup;
+            mainMenuMusicSource.playOnAwake = false;
+        
+            mainMenuMusicSource.Play();
+        }
+
+        public static void PlayGameSceneMusic()
+        {
+            AudioClip gameBackgroundMusicClip = GameAssets.I.soundAudioClipArray[5].audioClip;
+            GameObject gameBackgroundMusicObject = new GameObject("GameBackgroundMusic");
+            AudioSource gameBackgroundMusicSource = gameBackgroundMusicObject.AddComponent<AudioSource>();
+            gameBackgroundMusicSource.clip = gameBackgroundMusicClip;
+            gameBackgroundMusicSource.loop = true;
+            gameBackgroundMusicSource.outputAudioMixerGroup = GameAssets.I.musicMixerGroup;
+            gameBackgroundMusicSource.playOnAwake = false;
+        
+            gameBackgroundMusicSource.Play();
         }
     }
 }

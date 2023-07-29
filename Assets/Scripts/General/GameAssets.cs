@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace General
 {
@@ -18,9 +19,11 @@ namespace General
         public Sprite boxSprite;
 
         public SoundAudioClip[] soundAudioClipArray;
-        //public AudioClip mainMenuMusicClip;
-        //public AudioClip gameMusicClip;
-    
+        
+        public AudioMixerGroup sfxMixerGroup;
+        public AudioMixerGroup musicMixerGroup;
+        public AudioMixerGroup snakeMoveMixerGroup;
+        
         [Serializable]
         public class SoundAudioClip
         {

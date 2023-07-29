@@ -21,6 +21,7 @@ namespace UI
     
         private void Show(bool isNewHighscore) {
             gameObject.SetActive(true);
+            //SoundManager.SetAudioMixerGroup(GameAssets.I.sfxMixerGroup);
             SoundManager.PlaySound(SoundManager.Sound.SnakeDie);
 
             Transform retryButton = transform.Find("retryButton");
@@ -44,8 +45,9 @@ namespace UI
             _instance.Show(isNewHighscore);
         }
 
-        public void Retry()
+        private void Retry()
         {
+            //SoundManager.SetAudioMixerGroup(GameAssets.I.sfxMixerGroup);
             SoundManager.PlaySound(SoundManager.Sound.RestartGame);
             Loader.Load(Loader.Scene.GameScene);
             // Show();

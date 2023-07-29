@@ -16,6 +16,7 @@ namespace UI
             transform.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             transform.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
             
+            //SoundManager.SetAudioMixerGroup(GameAssets.I.sfxMixerGroup);
             transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
             transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => GameHandler.ResumeGame());
 

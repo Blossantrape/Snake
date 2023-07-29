@@ -425,7 +425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69cf78190bf6a3046ac5b09e30083308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sfxMixerGroup: {fileID: -8456901970045776280, guid: 7705eeb6242e56649939901b59663222, type: 2}
   snake: {fileID: 0}
 --- !u!1 &263535628
 GameObject:
@@ -1705,6 +1704,9 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: d4b2ba6e16275e64faba8687605415eb, type: 3}
   - sound: 0
     audioClip: {fileID: 0}
+  sfxMixerGroup: {fileID: -778334431731889610, guid: 7705eeb6242e56649939901b59663222, type: 2}
+  musicMixerGroup: {fileID: -8456901970045776280, guid: 7705eeb6242e56649939901b59663222, type: 2}
+  snakeMoveMixerGroup: {fileID: -1096573510237923964, guid: 7705eeb6242e56649939901b59663222, type: 2}
 --- !u!1 &1015027119
 GameObject:
   m_ObjectHideFlags: 0
