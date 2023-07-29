@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace General
@@ -6,6 +7,7 @@ namespace General
     public static class SoundManager
     {
         private static AudioSource _audioSource = null;
+        private static AudioMixerGroup _sfxMixerGroup = null;
         public enum Sound
         {
             SnakeMove, //+
@@ -33,12 +35,18 @@ namespace General
             if (_audioSource == null)
             {
                 _audioSource = soundGameObject.AddComponent<AudioSource>();
+                _audioSource.outputAudioMixerGroup = _sfxMixerGroup;
                 _audioSource.playOnAwake = false;
                 
             }
 
             // Помечаем объект "Sounds" чтобы он не уничтожался при переходе сцен
             Object.DontDestroyOnLoad(soundGameObject);
+        }
+
+        public static void SetAudioMixerGroup(AudioMixerGroup mixerGroup)
+        {
+            _sfxMixerGroup = mixerGroup;
         }
     
         public static void PlaySound(Sound sound)
@@ -73,7 +81,7 @@ namespace General
             Debug.LogError("Sound" + sound + "not found!");
             return null;
         }
-
+        
         public static void AddButtonSound(this Button button)
         {
             button.onClick.AddListener(() => SoundManager.PlaySound(Sound.ButtonClick));

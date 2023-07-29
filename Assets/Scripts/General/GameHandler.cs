@@ -1,6 +1,6 @@
-using GameLoader;
 using UI;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 namespace General
@@ -12,6 +12,7 @@ namespace General
     {
         private static GameHandler _instance;
 
+        public AudioMixerGroup _sfxMixerGroup;
         
         private readonly int _widthGh = 16;
         private readonly int _heightGh = 22;
@@ -32,6 +33,7 @@ namespace General
         private void Awake() {
             _instance = this;
             //_mainCamera = Camera.main;
+            //AudioMixerGroup sfxMixerGroup 
             Score.InitializeStatic();
             Time.timeScale = 1f;
 
@@ -44,16 +46,19 @@ namespace General
             // Воспроизведение фоновой музики от сцены.
             if (IsMainMenuScene())
             {
+                SoundManager.SetAudioMixerGroup(_sfxMixerGroup);
+                //SoundManager.PlaySound(SoundManager.Sound.BackGroundMenu);
                 PlayMainMusic();
                 Debug.Log("Menu music");
             }
             else if(IsGameScene())
             {
+                SoundManager.SetAudioMixerGroup(_sfxMixerGroup);
+                //SoundManager.PlaySound(SoundManager.Sound.BackGroundGame);
                 PlayGameMusic();
                 Debug.Log("Game music");
             }
-        
-        
+            
             // Параметры берутся из размера используемой сетки (можно Scale from background).
             _levelGrid = new LevelGrid(_widthGh, _heightGh);
             //_levelGrid.SetParent(transform);

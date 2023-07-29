@@ -5,40 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b4fd1c3-7a29-4c9f-ac83-fa60392ec10a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Menu/interface.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/Menu/interface.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/GameEndMusic.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/GameEndMusic.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/GameMusic.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/GameMusic.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/GameMusic3.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/GameMusic3.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/MainMenuMusic.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/MainMenuMusic.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/MainMenuMusic2.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/Musics/MainMenuMusic2.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/Game_Over_2.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/Game_Over_2.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/restartGame.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/restartGame.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/snakeDead1.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/snakeDead1.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/snakeEat.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/NewSounds/SoundEffects/snakeEat.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GeneralAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralAudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/warning.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/warning.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/LevelGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/LevelGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameOverWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +22,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/Score.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/VolumeValue.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,31 +38,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.42410713&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.42410713",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "proofread",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\3Saom\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\3Saom\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\3Saom\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\tolik\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.3f1\Editor\Unity.exe" />
