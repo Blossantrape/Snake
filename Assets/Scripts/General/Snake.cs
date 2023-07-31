@@ -38,7 +38,7 @@ public class Snake : MonoBehaviour
     private void Awake() 
     {
         _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
-        _gridMoveTimerMax = .5f; // Интервал движения.
+        _gridMoveTimerMax = .1f; // Интервал движения. // Стандарт: 0.5f.
         _gridMoveTimer = _gridMoveTimerMax; // Так надо.
         _gridMoveDirection = Direction.Right; // Направление змеи, вправо.
 

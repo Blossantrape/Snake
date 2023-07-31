@@ -52,11 +52,15 @@ namespace General
             switch (sound)
             {
                 case Sound.ButtonClick:
+                    return GameAssets.I.buttonClickMixerGroup;
                 case Sound.SnakeDie:
+                    return GameAssets.I.deadMixerGroup;
                 case Sound.SnakeEat:
+                    return GameAssets.I.eatMixerGroup;
                 case Sound.RestartGame:
+                    return GameAssets.I.restartMixerGroup;
                 case Sound.GameOver:
-                    return GameAssets.I.sfxMixerGroup;
+                    return GameAssets.I.gameOverMixerGroup;
                 case Sound.BackGroundMenu:
                 case Sound.BackGroundGame:
                     return GameAssets.I.musicMixerGroup;

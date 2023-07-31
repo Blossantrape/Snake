@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Serialization;
 
 namespace General
 {
@@ -22,6 +23,11 @@ namespace General
         
         public AudioMixerGroup sfxMixerGroup;
         public AudioMixerGroup musicMixerGroup;
+        public AudioMixerGroup buttonClickMixerGroup;
+        public AudioMixerGroup deadMixerGroup;
+        public AudioMixerGroup gameOverMixerGroup;
+        public AudioMixerGroup eatMixerGroup;
+        public AudioMixerGroup restartMixerGroup;
         public AudioMixerGroup snakeMoveMixerGroup;
         
         [Serializable]
