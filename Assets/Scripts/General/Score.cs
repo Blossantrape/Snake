@@ -35,8 +35,8 @@ namespace General
         {
             return TrySetNewHighscore(_score);
         }
-        
-        public static bool TrySetNewHighscore(int score)
+
+        private static bool TrySetNewHighscore(int score)
         {
             int highscore = GetHighscore();
             if (score > highscore)
@@ -57,10 +57,15 @@ namespace General
 
         public static void ClearScore()
         {
-            //_score = 0;
             PlayerPrefs.SetInt("highscore", _score = 0);
             PlayerPrefs.Save();
-            //Debug.Log("Clear Score.");
+            SoundManager.PlaySound(SoundManager.Sound.ButtonClick);
+        }
+
+        public static void DebugScore()
+        {
+            PlayerPrefs.SetInt("highscore", _score = 250);
+            PlayerPrefs.Save();
             SoundManager.PlaySound(SoundManager.Sound.ButtonClick);
         }
     }

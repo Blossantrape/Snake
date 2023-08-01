@@ -66,6 +66,18 @@ namespace General
                     GameHandler.PauseGame();
                 }
             }
+
+            if (Input.GetKeyDown(KeyCode.Backspace))
+            {
+                Score.DebugScore();
+                Debug.Log("251");
+            }
+
+            if (Score.GetScore() == 251)
+            {
+                WinGame();
+                Debug.Log("Win");
+            }
         }
         
         private bool IsMainMenuScene()
@@ -77,9 +89,7 @@ namespace General
         {
             return SceneManager.GetActiveScene().name == "GameScene";
         }
-
         
-
         public static void SnakeDied()
         {
             bool isNewHighscore = Score.TrySetNewHighscore();
@@ -102,6 +112,12 @@ namespace General
         private static bool IsGamePaused()
         {
             return Time.deltaTime == 0f;
+        }
+
+        private static void WinGame()
+        {
+            WinGameWindow.ShowStatic();
+            Time.timeScale = 0f;
         }
     }
 }

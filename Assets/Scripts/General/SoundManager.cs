@@ -21,6 +21,7 @@ namespace General
             BackGroundGame, //+
             RestartGame, //+
             GameOver,  //+
+            WinGame, //-
         }
         
         private static void Initialize()
@@ -64,6 +65,8 @@ namespace General
                 case Sound.BackGroundMenu:
                 case Sound.BackGroundGame:
                     return GameAssets.I.musicMixerGroup;
+                case Sound.WinGame:
+                    return GameAssets.I.winGameMixerGroup;
                 default:
                     return GameAssets.I.snakeMoveMixerGroup;
             }
