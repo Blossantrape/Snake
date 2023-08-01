@@ -123,6 +123,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: da31f42dc9912df4885e73423445a170
   m_Children:
+  - {fileID: -9089783774798031133}
   - {fileID: 7680947954194959274}
   - {fileID: 6287905406976503961}
   - {fileID: 1962768047575446024}
@@ -155,6 +156,8 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 6b59433dbf2b7d044964524d55eeea4e
     name: music
+  - guid: b0831a3952241f74ea9a30e223015d08
+    name: sfx
   m_AudioMixerGroupViews:
   - guids:
     - 421ab20ecec79f543b1881ef0e472607
@@ -180,7 +183,6 @@ AudioMixerGroupController:
   m_GroupID: 421ab20ecec79f543b1881ef0e472607
   m_Children:
   - {fileID: -8456901970045776280}
-  - {fileID: -9089783774798031133}
   - {fileID: -778334431731889610}
   m_Volume: d4c38d2160609214bba11878ab978937
   m_Pitch: 13cdf1391cadab74281a584cbac4e500

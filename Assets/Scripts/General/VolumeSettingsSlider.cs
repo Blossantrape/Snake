@@ -7,11 +7,12 @@ public class VolumeSettingsSlider : MonoBehaviour
 {
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
 
     private void Awake()
     {
-        //transform.Find("settingsInside").Find("musicSlider").GetComponent<Slider>().onValueChanged.AddListener(SetMusicVolume);
-        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        musicSlider.onValueChanged.AddListener(delegate { SetVolume(musicSlider, "music") ;});
+        sfxSlider.onValueChanged.AddListener(delegate { SetVolume(sfxSlider, "sfx"); });
     }
 
     private void Start()
@@ -22,22 +23,24 @@ public class VolumeSettingsSlider : MonoBehaviour
         }
         else
         {
-            SetMusicVolume(musicSlider.value);
+            SetVolume(musicSlider, "music");
+            SetVolume(sfxSlider, "sfx");
         }
     }
 
-    private void SetMusicVolume(float volume)
+    private void SetVolume(Slider slider, string mixerParameter)
     {
-        //volume = musicSlider.value;
+        float volume = slider.value;
         float mixerVolume = Mathf.Lerp(-80f, 0f, volume);
-        myMixer.SetFloat("music", mixerVolume);
-        PlayerPrefs.SetFloat("musicVolume", volume);
+        myMixer.SetFloat(mixerParameter, mixerVolume);
+        PlayerPrefs.SetFloat(mixerParameter + "Volume", volume);
     }
 
     private void LoadVolume()
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
-        
-        SetMusicVolume(musicSlider.value);
+        SetVolume(musicSlider, "music");
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
+        SetVolume(sfxSlider, "sfx");
     }
 }
