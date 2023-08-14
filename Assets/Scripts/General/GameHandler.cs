@@ -49,11 +49,11 @@ namespace General
             snake.Setup(_levelGrid); // Ссылка змеи, пометка.
             _levelGrid.Setup(snake); // Передача ссылки на змею.
         
-            // Box
+            /*// Box Для проверик размера игрового поля.
             // Добавление компонента к объекту.
             _box = gameObject.AddComponent<Box>();
             // Создание границы игрового поля.
-            _box.CreateBorder(_widthGh, _heightGh);
+            _box.CreateBorder(_widthGh, _heightGh);*/
         }
 
         private void Update()

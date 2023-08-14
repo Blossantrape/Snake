@@ -35,8 +35,9 @@ public class Snake : MonoBehaviour
         this._levelGrid = levelGrid; // Ссылка змеи, пометка.
     }
     
-    private void Awake() 
+    private void Awake()
     {
+        MobileInputHandler.OnSwipe += HandleSwipe;
         _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
         _gridMoveTimerMax = .1f; // Интервал движения. // Стандарт: 0.5f.
         _gridMoveTimer = _gridMoveTimerMax; // Так надо.
@@ -55,7 +56,7 @@ public class Snake : MonoBehaviour
         switch (_state)
         {
             case State.Alive:
-                HandleInput();
+                //HandleInput();
                 HandleGrindMovement();
                 break;
             case State.Dead:
@@ -64,7 +65,38 @@ public class Snake : MonoBehaviour
         
     }
 
-    private void HandleInput()
+    private void HandleSwipe(MobileInputHandler.SwipeDirection swipeDirection)
+    {
+        switch (swipeDirection)
+        {
+            case MobileInputHandler.SwipeDirection.Up:
+                if (_gridMoveDirection != Direction.Down) // Не позволяет поворачиваться на 180 градусов.
+                {
+                    _gridMoveDirection = Direction.Up;
+                }
+                break;
+            case MobileInputHandler.SwipeDirection.Down:
+                if (_gridMoveDirection != Direction.Up) // Не позволяет поворачиваться на 180 градусов.
+                {
+                    _gridMoveDirection = Direction.Down;
+                }
+                break;
+            case MobileInputHandler.SwipeDirection.Right:
+                if (_gridMoveDirection != Direction.Left) // Не позволяет поворачиваться на 180 градусов.
+                {
+                    _gridMoveDirection = Direction.Right;
+                }
+                break;
+            case MobileInputHandler.SwipeDirection.Left:
+                if (_gridMoveDirection != Direction.Right) // Не позволяет поворачиваться на 180 градусов.
+                {
+                    _gridMoveDirection = Direction.Left;
+                }
+                break;
+        }
+    }
+
+    /*private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.W)) // Управление.
         {
@@ -95,7 +127,7 @@ public class Snake : MonoBehaviour
                 _gridMoveDirection = Direction.Right;
             }
         }
-    }
+    }*/
 
     private void HandleGrindMovement()
     {

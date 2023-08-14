@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class WinGameWindow : MonoBehaviour
 {
     private static WinGameWindow _instance;
+    private VFXController _vfxController;
     
     private void Awake()
     {
@@ -25,7 +26,7 @@ public class WinGameWindow : MonoBehaviour
     private void Show() {
         gameObject.SetActive(true);
         SoundManager.PlaySound(SoundManager.Sound.WinGame);
-
+        _vfxController.ActivateVFX();
         //Transform retryButton = transform.Find("retryButton");
         //retryButton.gameObject.SetActive(true);
 

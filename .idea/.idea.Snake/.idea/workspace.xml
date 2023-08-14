@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b4fd1c3-7a29-4c9f-ac83-fa60392ec10a" name="Changes" comment="">
+    <list default="true" id="f7fafd9a-61d0-4cab-8f52-ad27f66fcf94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/aws.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/Assets/GeneralAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GeneralAudioMixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/warning.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/warning.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" afterDir="false" />
-=======
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/Snake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Snake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/WinGameWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/WinGameWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,44 +31,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/Score.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/VolumeValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/VFXController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
-  </component>
-  <component name="ProjectId" id="2OhKTWLlKNScSH5JoHVIoqH50ep" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2TQNxqBW9IIuZq78XLKXNHHmMTG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.42410713",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "proofread",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\tolik\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
       "C:\\Users\\tolik\\AppData\\Local\\Symbols\\src"
     ]
   }
@@ -77,14 +76,6 @@
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.3f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Developer\UnityRepositories\Snake -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Developer\UnityRepositories\Snake" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.2.19f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Developer\Repositories\RepositoryUnity\Snake -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Developer\Repositories\RepositoryUnity\Snake" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -115,74 +106,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1b4fd1c3-7a29-4c9f-ac83-fa60392ec10a" name="Changes" comment="" />
-      <created>1682007388756</created>
+      <changelist id="f7fafd9a-61d0-4cab-8f52-ad27f66fcf94" name="Changes" comment="" />
+      <created>1690971612428</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682007388756</updated>
-      <workItem from="1682007397301" duration="575000" />
-      <workItem from="1683024132133" duration="320000" />
-      <workItem from="1683025590153" duration="3826000" />
-      <workItem from="1683108319751" duration="1862000" />
-      <workItem from="1683210419106" duration="3132000" />
-      <workItem from="1683280542988" duration="6148000" />
-      <workItem from="1683720894223" duration="1228000" />
-      <workItem from="1683790869437" duration="2519000" />
-      <workItem from="1683913461478" duration="3009000" />
-      <workItem from="1684156001004" duration="2256000" />
-      <workItem from="1684497303091" duration="7216000" />
-      <workItem from="1684632995062" duration="7209000" />
-      <workItem from="1684846553062" duration="6040000" />
-      <workItem from="1685003578077" duration="6272000" />
-      <workItem from="1685357407743" duration="10217000" />
-      <workItem from="1685422355070" duration="2447000" />
-      <workItem from="1685540002534" duration="598000" />
-      <workItem from="1685625284533" duration="1919000" />
-      <workItem from="1685705007903" duration="6777000" />
-      <workItem from="1685975313396" duration="5118000" />
-      <workItem from="1686039238849" duration="4388000" />
-      <workItem from="1686131034732" duration="4583000" />
-      <workItem from="1686294136739" duration="6178000" />
-      <workItem from="1686467530740" duration="2392000" />
-      <workItem from="1686470941702" duration="251000" />
-      <workItem from="1686471247217" duration="172000" />
-      <workItem from="1686471464676" duration="12549000" />
-      <workItem from="1686495711666" duration="135000" />
-      <workItem from="1686660559949" duration="1068000" />
-      <workItem from="1686741259780" duration="5383000" />
-      <workItem from="1686990473423" duration="577000" />
-      <workItem from="1687092582216" duration="6742000" />
-      <workItem from="1687193018723" duration="5627000" />
-      <workItem from="1687353585862" duration="1176000" />
-      <workItem from="1687417762635" duration="1323000" />
-      <workItem from="1687441851285" duration="8390000" />
-      <workItem from="1687512973105" duration="1212000" />
-      <workItem from="1687684671919" duration="602000" />
-      <workItem from="1687770911558" duration="4785000" />
-      <workItem from="1687782397170" duration="9285000" />
-      <workItem from="1687801031442" duration="1776000" />
-      <workItem from="1688118427481" duration="8585000" />
-      <workItem from="1688198284418" duration="1732000" />
-      <workItem from="1688467206109" duration="194000" />
-      <workItem from="1688468122545" duration="1470000" />
-      <workItem from="1688554146207" duration="1592000" />
-      <workItem from="1688555853087" duration="3902000" />
-      <workItem from="1688810563598" duration="645000" />
-      <workItem from="1688888152109" duration="4503000" />
-      <workItem from="1689012398877" duration="1710000" />
-      <workItem from="1689147549998" duration="1218000" />
-      <workItem from="1689160138103" duration="6079000" />
-      <workItem from="1689506023750" duration="4612000" />
-      <workItem from="1689589057157" duration="194000" />
-      <workItem from="1689589277101" duration="278000" />
-      <workItem from="1689589682154" duration="85000" />
-      <workItem from="1689590646034" duration="5457000" />
-      <workItem from="1689596738418" duration="8438000" />
-      <workItem from="1689848554264" duration="12493000" />
-      <workItem from="1689868274538" duration="512000" />
-      <workItem from="1689937755419" duration="1691000" />
-      <workItem from="1690183952493" duration="19867000" />
-      <workItem from="1690259314362" duration="668000" />
+      <updated>1690971612428</updated>
+      <workItem from="1690971617521" duration="1186000" />
+      <workItem from="1691915649618" duration="9881000" />
     </task>
     <servers />
   </component>
@@ -191,7 +121,7 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -205,9 +135,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
