@@ -39,7 +39,7 @@ public class Snake : MonoBehaviour
     {
         MobileInputHandler.OnSwipe += HandleSwipe;
         _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
-        _gridMoveTimerMax = .1f; // Интервал движения. // Стандарт: 0.5f.
+        _gridMoveTimerMax = .5f; // Интервал движения. // Стандарт: 0.5f.
         _gridMoveTimer = _gridMoveTimerMax; // Так надо.
         _gridMoveDirection = Direction.Right; // Направление змеи, вправо.
 
@@ -73,24 +73,28 @@ public class Snake : MonoBehaviour
                 if (_gridMoveDirection != Direction.Down) // Не позволяет поворачиваться на 180 градусов.
                 {
                     _gridMoveDirection = Direction.Up;
+                    Debug.Log("UP");
                 }
                 break;
             case MobileInputHandler.SwipeDirection.Down:
                 if (_gridMoveDirection != Direction.Up) // Не позволяет поворачиваться на 180 градусов.
                 {
                     _gridMoveDirection = Direction.Down;
+                    Debug.Log("Down");
                 }
                 break;
             case MobileInputHandler.SwipeDirection.Right:
                 if (_gridMoveDirection != Direction.Left) // Не позволяет поворачиваться на 180 градусов.
                 {
                     _gridMoveDirection = Direction.Right;
+                    Debug.Log("Right");
                 }
                 break;
             case MobileInputHandler.SwipeDirection.Left:
                 if (_gridMoveDirection != Direction.Right) // Не позволяет поворачиваться на 180 градусов.
                 {
                     _gridMoveDirection = Direction.Left;
+                    Debug.Log("Left");
                 }
                 break;
         }
