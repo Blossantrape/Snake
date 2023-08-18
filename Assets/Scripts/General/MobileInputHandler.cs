@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using TouchPhase = UnityEngine.TouchPhase;
 
 public class MobileInputHandler : MonoBehaviour
 {
-    public static event System.Action<SwipeDirection> OnSwipe; 
-
+    public static event System.Action<SwipeDirection> OnSwipe;
+    
     private Vector2 _touchStartPos;
 
     public enum SwipeDirection
