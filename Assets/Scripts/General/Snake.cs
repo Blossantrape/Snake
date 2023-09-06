@@ -5,7 +5,7 @@ using UnityEngine;
 public class Snake : MonoBehaviour
 {
     // Структура направлений змеи.
-    private enum Direction // Варианты направления для спрайта тела.
+    public enum Direction // Варианты направления для спрайта тела.
     {
         Left,
         Right,
@@ -21,7 +21,7 @@ public class Snake : MonoBehaviour
     }
 
     private State _state; //  Состояние змеи.
-    private Direction _gridMoveDirection; // Направление змейки.
+    [HideInInspector] public Direction _gridMoveDirection; // Направление змейки.
     private Vector2Int _gridPosition; // Позиция змейки.
     private float _gridMoveTimer; // Время для автоматического премещения змейки.
     private float _gridMoveTimerMax; // Её максимальное значение.
@@ -37,9 +37,9 @@ public class Snake : MonoBehaviour
     
     private void Awake()
     {
-        MobileInputHandler.OnSwipe += HandleSwipe;
+        //MobileInputHandlerTouch.OnSwipe += HandleSwipe;
         _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
-        _gridMoveTimerMax = .5f; // Интервал движения. // Стандарт: 0.5f.
+        _gridMoveTimerMax = 1f; // Интервал движения. // Стандарт: 0.5f.
         _gridMoveTimer = _gridMoveTimerMax; // Так надо.
         _gridMoveDirection = Direction.Right; // Направление змеи, вправо.
 
@@ -64,59 +64,26 @@ public class Snake : MonoBehaviour
         }
         
     }
-
-    private void HandleSwipe(MobileInputHandler.SwipeDirection swipeDirection)
+    
+    private void HandleInput()
     {
-        switch (swipeDirection)
-        {
-            case MobileInputHandler.SwipeDirection.Up:
-                if (_gridMoveDirection != Direction.Down) // Не позволяет поворачиваться на 180 градусов.
-                {
-                    _gridMoveDirection = Direction.Up;
-                    Debug.Log("UP");
-                }
-                break;
-            case MobileInputHandler.SwipeDirection.Down:
-                if (_gridMoveDirection != Direction.Up) // Не позволяет поворачиваться на 180 градусов.
-                {
-                    _gridMoveDirection = Direction.Down;
-                    Debug.Log("Down");
-                }
-                break;
-            case MobileInputHandler.SwipeDirection.Right:
-                if (_gridMoveDirection != Direction.Left) // Не позволяет поворачиваться на 180 градусов.
-                {
-                    _gridMoveDirection = Direction.Right;
-                    Debug.Log("Right");
-                }
-                break;
-            case MobileInputHandler.SwipeDirection.Left:
-                if (_gridMoveDirection != Direction.Right) // Не позволяет поворачиваться на 180 градусов.
-                {
-                    _gridMoveDirection = Direction.Left;
-                    Debug.Log("Left");
-                }
-                break;
-        }
-    }
-
-    /*private void HandleInput()
-    {
-        if (Input.GetKeyDown(KeyCode.W)) // Управление.
+        MobileInputHandleGamePad inputHandle = GetComponent<MobileInputHandleGamePad>();
+        
+        if (inputHandle) // Управление. //0
         {
             if (_gridMoveDirection != Direction.Down) // Не позволяет поворачиваться на 180 градусов.
             {
                 _gridMoveDirection = Direction.Up;
             }
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S)) //1
         {
             if (_gridMoveDirection != Direction.Up) // Не позволяет поворачиваться на 180 градусов.
             {
                 _gridMoveDirection = Direction.Down;
             }
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A)) //2
         {
             if (_gridMoveDirection != Direction.Right) // Не позволяет поворачиваться на 180 градусов.
             {
@@ -124,14 +91,14 @@ public class Snake : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D)) //3
         {
             if (_gridMoveDirection != Direction.Left) // Не позволяет поворачиваться на 180 градусов.
             {
                 _gridMoveDirection = Direction.Right;
             }
         }
-    }*/
+    }
 
     private void HandleGrindMovement()
     {

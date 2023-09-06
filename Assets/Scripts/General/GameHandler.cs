@@ -58,20 +58,20 @@ namespace General
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
+            /*if (Input.GetKeyDown(KeyCode.Escape)) {
                 if (IsGamePaused()) {
                     GameHandler.ResumeGame();
                 }
                 else {
                     GameHandler.PauseGame();
                 }
-            }
+            }*/
 
-            if (Input.GetKeyDown(KeyCode.Backspace))
+            /*if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 Score.DebugScore();
                 Debug.Log("251");
-            }
+            }*/
 
             if (Score.GetScore() == 251)
             {

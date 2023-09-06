@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TouchPhase = UnityEngine.TouchPhase;
 
-public class MobileInputHandler : MonoBehaviour
+public class MobileInputHandlerTouch : MonoBehaviour
 {
     public static event System.Action<SwipeDirection> OnSwipe;
     
