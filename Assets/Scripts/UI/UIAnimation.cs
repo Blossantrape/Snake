@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+
+using UnityEngine;
+
+namespace UI
+{
+    public class UIAnimation : MonoBehaviour
+    {
+        public void Open()
+        {
+            
+        }
+    }
+}
