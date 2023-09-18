@@ -1,3 +1,4 @@
+using System;
 using GameLoader;
 using General;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace UI
     public class PauseWindow : MonoBehaviour
     {
         private static PauseWindow _instance;
+        private int _paramPauseGame = 1;
     
         private void Awake()
         {
@@ -15,6 +17,8 @@ namespace UI
         
             transform.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             transform.GetComponent<RectTransform>().sizeDelta = Vector2.zero;
+            
+            transform.Find("pauseBtn").GetComponent<Button>().onClick.AddListener(() => GameHandler.PauseGame(_paramPauseGame));
             
             //SoundManager.SetAudioMixerGroup(GameAssets.I.sfxMixerGroup);
             transform.Find("resumeBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
@@ -25,19 +29,19 @@ namespace UI
             
             transform.Find("mainMenuBtnPW").GetComponent<Button>().onClick.AddListener(() => SoundManager.PlaySound(SoundManager.Sound.ButtonClick));
             transform.Find("mainMenuBtnPW").GetComponent<Button>().onClick.AddListener(() => Loader.Load(Loader.Scene.MainMenu));
-            
 
-        
+            _paramPauseGame = 0;
+            
             Hide();
         }
-    
-        private void Show() {
-            gameObject.SetActive(true);/*
 
-        Transform retryButton = transform.Find("retryButton");
-        retryButton.gameObject.SetActive(true);
+        private void Show() {
+            gameObject.SetActive(true);
+
+            /*Transform pauseButton = transform.Find("pauseBtn");
+            pauseButton.gameObject.SetActive(true);
         
-        Debug.Log("Показ Retry/");*/
+            Debug.Log("Показ Retry/");*/
         }
     
         private void Hide() {

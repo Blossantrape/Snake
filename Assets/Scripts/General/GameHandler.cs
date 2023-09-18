@@ -76,7 +76,7 @@ namespace General
             if (Score.GetScore() == 251)
             {
                 WinGame();
-                Debug.Log("Win");
+                //Debug.Log("Win");
             }
         }
         
@@ -103,10 +103,19 @@ namespace General
             Time.timeScale = 1f;
         }
 
-        private static void PauseGame()
+        public static void PauseGame(int param)
         {
-            PauseWindow.ShowStatic();
-            Time.timeScale = 0f;
+            switch (param)
+            {
+                case 0:
+                    PauseWindow.ShowStatic();
+                    Time.timeScale = 0f;
+                    break;
+                case 1:
+                    PauseWindow.HideStatic();
+                    Time.timeScale = 1f;
+                    break;
+            }
         }
 
         private static bool IsGamePaused()

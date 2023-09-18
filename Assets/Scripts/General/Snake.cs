@@ -39,7 +39,7 @@ public class Snake : MonoBehaviour
     {
         //MobileInputHandlerTouch.OnSwipe += HandleSwipe;
         _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
-        _gridMoveTimerMax = 1f; // Интервал движения. // Стандарт: 0.5f.
+        _gridMoveTimerMax = 0.1f; // Интервал движения. // Стандарт: 0.5f.
         _gridMoveTimer = _gridMoveTimerMax; // Так надо.
         _gridMoveDirection = Direction.Right; // Направление змеи, вправо.
 
@@ -236,7 +236,7 @@ public class Snake : MonoBehaviour
             this._snakeMovePosition = snakeMovePosition;
             _transform.position = new Vector3(snakeMovePosition.GetGridPosition().x, snakeMovePosition.GetGridPosition().y);
 
-            float angle;
+            float angle = 0;
             switch (snakeMovePosition.GetDirection())
             {
                 default:
@@ -244,40 +244,40 @@ public class Snake : MonoBehaviour
                     switch (snakeMovePosition.GetPreviousDirection()) {
                         default:
                             angle = 0; break;
-                        case Direction.Left:
+                        /*case Direction.Left:
                             angle = 0 + 45; break;
                         case Direction.Right:
-                            angle = 0 - 45; break;
+                            angle = 0 - 45; break;*/
                     }
                     break;
                 case Direction.Down:
                     switch (snakeMovePosition.GetPreviousDirection()) {
                         default:
                             angle = 180; break;
-                        case Direction.Left:
+                        /*case Direction.Left:
                             angle = 180 + 45; break;
                         case Direction.Right:
-                            angle = 180 - 45; break;
+                            angle = 180 - 45; break;*/
                     }
                     break;
                 case Direction.Left:
                     switch (snakeMovePosition.GetPreviousDirection()) {
                         default:
                             angle = -90; break;
-                        case Direction.Down:
+                        /*case Direction.Down:
                             angle = -45; break;
                         case Direction.Up:
-                            angle = 45; break;
+                            angle = 45; break;*/
                     }
                     break;
                 case Direction.Right:
                     switch (snakeMovePosition.GetPreviousDirection()) {
                         default:
                             angle = 90; break;
-                        case Direction.Down:
+                        /*case Direction.Down:
                             angle = 45; break;
                         case Direction.Up:
-                            angle = -45; break;
+                            angle = -45; break;*/
                     }
                     break;
             }        

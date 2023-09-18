@@ -8,6 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/Snake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Snake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseWindow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/Box.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03172777147e4fefa30f88bed071b9947400/8e/49288b71/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a14bafc3d16548339699574d795d51921a1400/e6/15050f48/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -119,6 +123,8 @@
       <workItem from="1693937858301" duration="7269000" />
       <workItem from="1694031945198" duration="159000" />
       <workItem from="1694078758479" duration="12464000" />
+      <workItem from="1694718781860" duration="5430000" />
+      <workItem from="1694887306297" duration="1697000" />
     </task>
     <servers />
   </component>
