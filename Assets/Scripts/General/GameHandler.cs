@@ -11,7 +11,7 @@ namespace General
     {
         private static GameHandler _instance;
         
-        private readonly int _widthGh = 16;
+        private readonly int _widthGh = 14;
         private readonly int _heightGh = 22;
     
         [SerializeField] private Snake snake;
@@ -100,22 +100,15 @@ namespace General
         public static void ResumeGame()
         {
             PauseWindow.HideStatic();
+            GamePad.ShowStatic();
             Time.timeScale = 1f;
         }
 
-        public static void PauseGame(int param)
+        public static void PauseGame()
         {
-            switch (param)
-            {
-                case 0:
-                    PauseWindow.ShowStatic();
-                    Time.timeScale = 0f;
-                    break;
-                case 1:
-                    PauseWindow.HideStatic();
-                    Time.timeScale = 1f;
-                    break;
-            }
+            PauseWindow.ShowStatic();
+            GamePad.HideStatic();
+            Time.timeScale = 0f;
         }
 
         private static bool IsGamePaused()
