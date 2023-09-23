@@ -39,7 +39,7 @@ public class Snake : MonoBehaviour
     {
         //MobileInputHandlerTouch.OnSwipe += HandleSwipe;
         _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
-        _gridMoveTimerMax = 0.1f; // Интервал движения. // Стандарт: 0.5f.
+        _gridMoveTimerMax = 0.3f; // Интервал движения. // Стандарт: 0.5f.
         _gridMoveTimer = _gridMoveTimerMax; // Так надо.
         _gridMoveDirection = Direction.Right; // Направление змеи, вправо.
 
