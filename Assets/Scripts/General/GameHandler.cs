@@ -1,3 +1,4 @@
+using Test;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -67,16 +68,22 @@ namespace General
                 }
             }*/
 
-            /*if (Input.GetKeyDown(KeyCode.Backspace))
+            if (Input.GetKeyDown(KeyCode.Backspace))
             {
                 Score.DebugScore();
-                Debug.Log("251");
-            }*/
+                Debug.Log("271");
+            }
 
-            if (Score.GetScore() == 251)
+            if (Score.GetScore() == 272)
             {
                 WinGame();
+                //TimeScaleForWinGame();
                 //Debug.Log("Win");
+            }
+
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                SoundManager.PlaySound(SoundManager.Sound.WinGame);
             }
         }
         
@@ -119,6 +126,10 @@ namespace General
         private static void WinGame()
         {
             WinGameWindow.ShowStatic();
+        }
+
+        private static void TimeScaleForWinGame()
+        {
             Time.timeScale = 0f;
         }
     }

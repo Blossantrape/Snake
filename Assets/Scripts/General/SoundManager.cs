@@ -21,7 +21,7 @@ namespace General
             BackGroundGame, //+
             RestartGame, //+
             GameOver,  //+
-            WinGame, //-
+            WinGame, //+
         }
         
         private static void Initialize()

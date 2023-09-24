@@ -64,7 +64,7 @@ namespace General
 
         public static void DebugScore()
         {
-            PlayerPrefs.SetInt("highscore", _score = 250);
+            PlayerPrefs.SetInt("highscore", _score = 271);
             PlayerPrefs.Save();
             SoundManager.PlaySound(SoundManager.Sound.ButtonClick);
         }
