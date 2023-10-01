@@ -1,7 +1,7 @@
 using General;
 using UnityEngine;
 
-namespace Test
+namespace DebugPlus
 {
     public class Box : MonoBehaviour
     {

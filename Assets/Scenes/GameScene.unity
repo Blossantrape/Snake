@@ -270,6 +270,51 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &153306551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153306553}
+  - component: {fileID: 153306552}
+  m_Layer: 0
+  m_Name: DebugPlus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &153306552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153306551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33fa79d2d9eb4c37a514aff087cf88ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vfxController: {fileID: 215721946}
+--- !u!4 &153306553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153306551}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 20, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215721942
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snake: {fileID: 1601906277}
+  _debugPlusScript: {fileID: 153306552}
 --- !u!114 &215721946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _vfxController: {fileID: 215721946}
+  _snake: {fileID: 1601906277}
 --- !u!1 &269424915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,7 +4168,7 @@ GameObject:
   - component: {fileID: 1481230766}
   - component: {fileID: 1481230768}
   - component: {fileID: 1481230767}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ConfettiVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10456,7 +10503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you have scored 251 points! \n Congratulations to you!
+  m_text: you have scored 272 points! \n Congratulations to you!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75213efb3dd9ae543806ec68f52fb489, type: 2}
   m_sharedMaterial: {fileID: -4857815861705271806, guid: 75213efb3dd9ae543806ec68f52fb489, type: 2}
@@ -10619,6 +10666,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1686737367}
   - {fileID: 1112819280}
+  - {fileID: 153306553}
   - {fileID: 215721943}
   - {fileID: 3855991735351943049}
   - {fileID: 1864420138}

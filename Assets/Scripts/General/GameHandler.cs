@@ -1,4 +1,4 @@
-using Test;
+using DebugPlus;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,6 +21,10 @@ namespace General
         // Box
         private Box _box;
         private Transform _parentTransform;
+        
+        // Debug
+        [SerializeField] private DebugPlusScript _debugPlusScript;
+        //
 
         private void Awake() {
             _instance = this;
@@ -33,13 +37,11 @@ namespace General
             if (IsMainMenuScene())
             {
                 SoundManager.PlayMainMenuMusic();
-                //PlayMainMusic();
                 Debug.Log("Menu music");
             }
             else if(IsGameScene())
             {
                 SoundManager.PlayGameSceneMusic();
-                //PlayGameMusic();
                 Debug.Log("Game music");
             }
             
@@ -59,32 +61,18 @@ namespace General
 
         private void Update()
         {
-            /*if (Input.GetKeyDown(KeyCode.Escape)) {
-                if (IsGamePaused()) {
-                    GameHandler.ResumeGame();
-                }
-                else {
-                    GameHandler.PauseGame();
-                }
-            }*/
-
-            if (Input.GetKeyDown(KeyCode.Backspace))
-            {
-                Score.DebugScore();
-                Debug.Log("271");
-            }
-
             if (Score.GetScore() == 272)
             {
                 WinGame();
                 //TimeScaleForWinGame();
                 //Debug.Log("Win");
             }
-
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                SoundManager.PlaySound(SoundManager.Sound.WinGame);
-            }
+            
+            // Debug
+            _debugPlusScript.DebugWinSound();
+            _debugPlusScript.DebugWinGameScore();
+            _debugPlusScript.DebugVFXWinGame();
+            //
         }
         
         private bool IsMainMenuScene()
@@ -126,11 +114,6 @@ namespace General
         private static void WinGame()
         {
             WinGameWindow.ShowStatic();
-        }
-
-        private static void TimeScaleForWinGame()
-        {
-            Time.timeScale = 0f;
         }
     }
 }

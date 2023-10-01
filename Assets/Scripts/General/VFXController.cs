@@ -1,24 +1,27 @@
-using System;
 using UnityEngine;
-using UnityEngine.VFX;
 
-public class VFXController : MonoBehaviour
+namespace General
 {
-    [SerializeField] private ParticleSystem _vfxObject;
-    private static VFXController _instance;
-
-    private void Awake()
+    public class VFXController : MonoBehaviour
     {
-        _instance = this;
-    }
+        [SerializeField] private ParticleSystem _vfxObject;
+        private static VFXController _instance;
 
-    public void ActivateVFX()
-    {
-        _vfxObject.Play();
-    }
+        private void Awake()
+        {
+            _instance = this;
+        }
 
-    public void DeactivateVFX()
-    {
-        _vfxObject.Stop();
+        public void ActivateVFX()
+        {
+            Debug.Log("vfx - play");
+            _vfxObject.Play();
+            Debug.Log("vfx - end");
+        }
+
+        public void DeactivateVFX()
+        {
+            _vfxObject.Stop();
+        }
     }
 }

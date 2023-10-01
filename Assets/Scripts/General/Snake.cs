@@ -15,13 +15,14 @@ namespace General
         }
     
         // Структура состояний змеи.
-        private enum State
+        public enum State
         {
             Alive,
-            Dead
+            Dead,
+            Stop
         }
 
-        private State _state; //  Состояние змеи.
+        public State _state; //  Состояние змеи.
         [HideInInspector] public Direction _gridMoveDirection; // Направление змейки.
         private Vector2Int _gridPosition; // Позиция змейки.
         private float _gridMoveTimer; // Время для автоматического премещения змейки.
@@ -41,7 +42,7 @@ namespace General
             //MobileInputHandlerTouch.OnSwipe += HandleSwipe;
             _gridPosition = new Vector2Int(0, 0); // Позция змейки, 0.9 - z, чтобы объект отображался.
             _gridMoveTimerMax = 0.4f; // Интервал движения. // Стандарт: 0.5f.
-            _gridMoveTimer = _gridMoveTimerMax; // Так надо.
+            _gridMoveTimer = _gridMoveTimerMax; // Для паузы между интервалами
             _gridMoveDirection = Direction.Right; // Направление змеи, вправо.
 
             _snakeMovePositionList = new List<SnakeMovePosition>(); // Инициализация списка.
@@ -53,17 +54,27 @@ namespace General
 
         private void Update()
         {
+            SnakeState();
+        }
+
+        private void SnakeState()
+        {
             // Изменение режима игры в зависимости от состояния.
             switch (_state)
             {
                 case State.Alive:
                     //HandleInput();
                     HandleGrindMovement();
+                    Debug.Log("snake - alive");
                     break;
                 case State.Dead:
+                    Debug.Log("snake - dead");
+                    break;
+                case State.Stop:
+                    SnakeStopForWinGame();
+                    Debug.Log("Snake - stop");
                     break;
             }
-        
         }
     
         private void HandleInput()
@@ -111,9 +122,8 @@ namespace General
             _gridMoveTimer += Time.deltaTime; // Обновление таймера каждый кадр.
             if (_gridMoveTimer >= _gridMoveTimerMax) // Если время >= максимального, то цикл выполняется.
             {
-                _gridMoveTimer -= _gridMoveTimerMax; // Не понял зачем.
-
-                //SoundManager.SetAudioMixerGroup(GameAssets.I.snakeMoveMixerGroup);
+                _gridMoveTimer -= _gridMoveTimerMax; // Для паузы между интервалами.
+                
                 SoundManager.PlaySound(SoundManager.Sound.SnakeMove);
 
                 SnakeMovePosition previousSnakeMovePosition = null;
@@ -331,10 +341,10 @@ namespace General
                 }
             }
         }
-    
-        public void SnakeStopForWinGame()
+
+        private void SnakeStopForWinGame()
         {
-            _gridMoveTimerMax = 1000000f;
+            _gridMoveTimer = 100f;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace General
     {
         private static WinGameWindow _instance;
         [SerializeField] private VFXController _vfxController;
-        private Snake _snake;
+        [SerializeField] private Snake _snake;
     
         private void Awake()
         {
@@ -26,10 +26,9 @@ namespace General
         private void Show() {
             gameObject.SetActive(true);
             SoundManager.PlaySound(SoundManager.Sound.WinGame);
-            _vfxController.ActivateVFX();
             ScoreWindow.HideStatic();
+            _snake._state = Snake.State.Stop;
             _vfxController.ActivateVFX();
-            _snake.SnakeStopForWinGame();
         }
     
         private void Hide() {
@@ -39,9 +38,9 @@ namespace General
         public static void ShowStatic() {
             _instance.Show();
         }
-
-        /*public static void HideStatic() {
+        
+        public static void HideStatic() {
         _instance.Hide();
-    }*/
+    }
     }
 }
