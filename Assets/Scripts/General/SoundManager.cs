@@ -131,5 +131,14 @@ namespace General
         
             gameBackgroundMusicSource.Play();
         }
+
+        public static void StopGameSceneMusic()
+        {
+            GameObject gameBackgroundMusicObject = GameObject.Find("GameBackgroundMusic");
+            AudioSource gameBackgroundMusicSource = gameBackgroundMusicObject.GetComponent<AudioSource>();
+            
+            gameBackgroundMusicSource.Stop();
+            Debug.Log("StopGameSceneMusic - true");
+        }
     }
 }

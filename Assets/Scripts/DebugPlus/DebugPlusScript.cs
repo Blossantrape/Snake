@@ -38,5 +38,14 @@ namespace DebugPlus
                 _vfxController.ActivateVFX();
             }
         }
+
+        public void DebugStopGameBackgroundMusic()
+        {
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                SoundManager.StopGameSceneMusic();
+                Debug.Log("P");
+            }
+        }
     }
 }

@@ -26,6 +26,7 @@ namespace General
         private void Show() {
             gameObject.SetActive(true);
             SoundManager.PlaySound(SoundManager.Sound.WinGame);
+            SoundManager.StopGameSceneMusic();
             ScoreWindow.HideStatic();
             _snake._state = Snake.State.Stop;
             _vfxController.ActivateVFX();
@@ -41,6 +42,6 @@ namespace General
         
         public static void HideStatic() {
         _instance.Hide();
-    }
+        }
     }
 }

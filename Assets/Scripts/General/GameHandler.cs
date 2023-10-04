@@ -72,6 +72,7 @@ namespace General
             _debugPlusScript.DebugWinSound();
             _debugPlusScript.DebugWinGameScore();
             _debugPlusScript.DebugVFXWinGame();
+            _debugPlusScript.DebugStopGameBackgroundMusic();
             //
         }
         
