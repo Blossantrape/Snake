@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f7fafd9a-61d0-4cab-8f52-ad27f66fcf94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DebugPlus/DebugPlusScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DebugPlus/DebugPlusScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/WinGameWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/WinGameWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP/URP2D.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP/URP2D.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseBtn.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +26,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/InputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/Snake.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/General/VFXController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test/Box.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PauseBtn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03172777147e4fefa30f88bed071b9947400/8e/49288b71/Input.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a14bafc3d16548339699574d795d51921a1400/e6/15050f48/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cd14705e8f094afcb566740ab5e8c02d1a2c00/f2/b74762e6/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -145,7 +144,8 @@
       <workItem from="1695766573289" duration="78000" />
       <workItem from="1696176419832" duration="2679000" />
       <workItem from="1696179168887" duration="3011000" />
-      <workItem from="1696450272891" duration="3756000" />
+      <workItem from="1696450272891" duration="6219000" />
+      <workItem from="1696456674401" duration="551000" />
     </task>
     <task id="LOCAL-00001" summary="minor fix Rider">
       <option name="closed" value="true" />

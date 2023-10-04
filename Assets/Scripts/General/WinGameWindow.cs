@@ -28,6 +28,8 @@ namespace General
             SoundManager.PlaySound(SoundManager.Sound.WinGame);
             SoundManager.StopGameSceneMusic();
             ScoreWindow.HideStatic();
+            PauseBtn.HideStatic();
+            GamePad.HideStatic();
             _snake._state = Snake.State.Stop;
             _vfxController.ActivateVFX();
         }

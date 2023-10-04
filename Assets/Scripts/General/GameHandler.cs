@@ -64,6 +64,7 @@ namespace General
             if (Score.GetScore() == 272)
             {
                 WinGame();
+                Score.SetHighscore();
                 //TimeScaleForWinGame();
                 //Debug.Log("Win");
             }

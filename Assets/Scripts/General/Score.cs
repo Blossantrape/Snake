@@ -8,7 +8,9 @@ namespace General
         public static event EventHandler OnHighscoreChanged; 
 
         private static int _score;
-        
+        private static int _setWinHighscore = 272;
+        private static string _HighscoreKey = "highscore";
+
         public static void InitializeStatic()
         {
             OnHighscoreChanged = null;
@@ -28,7 +30,12 @@ namespace General
         
         public static int GetHighscore()
         {
-            return PlayerPrefs.GetInt("highscore", 0);
+            return PlayerPrefs.GetInt(_HighscoreKey, 0);
+        }
+
+        public static void SetHighscore()
+        {
+            PlayerPrefs.SetInt(_HighscoreKey, _setWinHighscore);
         }
 
         public static bool TrySetNewHighscore()
@@ -41,7 +48,7 @@ namespace General
             int highscore = GetHighscore();
             if (score > highscore)
             {
-                PlayerPrefs.SetInt("highscore", score);
+                PlayerPrefs.SetInt(_HighscoreKey, score);
                 PlayerPrefs.Save();
                 if (OnHighscoreChanged != null)
                 {
@@ -57,14 +64,15 @@ namespace General
 
         public static void ClearScore()
         {
-            PlayerPrefs.SetInt("highscore", _score = 0);
+            PlayerPrefs.SetInt(_HighscoreKey, _score = 0);
             PlayerPrefs.Save();
             SoundManager.PlaySound(SoundManager.Sound.ButtonClick);
         }
 
+        //debug
         public static void DebugScore()
         {
-            PlayerPrefs.SetInt("highscore", _score = 271);
+            PlayerPrefs.SetInt(_HighscoreKey, _score = 271);
             PlayerPrefs.Save();
             SoundManager.PlaySound(SoundManager.Sound.ButtonClick);
         }
