@@ -47,5 +47,14 @@ namespace DebugPlus
                 Debug.Log("P");
             }
         }
+
+        public void DebugWinGame()
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                WinGameWindow.ShowStatic();
+                Debug.Log("W");
+            }
+        }
     }
 }

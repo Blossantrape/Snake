@@ -61,19 +61,14 @@ namespace General
 
         private void Update()
         {
-            if (Score.GetScore() == 272)
-            {
-                WinGame();
-                Score.SetHighscore();
-                //TimeScaleForWinGame();
-                //Debug.Log("Win");
-            }
+            WinGame();
             
             // Debug
             _debugPlusScript.DebugWinSound();
             _debugPlusScript.DebugWinGameScore();
             _debugPlusScript.DebugVFXWinGame();
             _debugPlusScript.DebugStopGameBackgroundMusic();
+            _debugPlusScript.DebugWinGame();
             //
         }
         
@@ -112,10 +107,16 @@ namespace General
         {
             return Time.deltaTime == 0f;
         }
-
+        
         private static void WinGame()
         {
-            WinGameWindow.ShowStatic();
+            if (Score.GetScore() == 272 && WinGameWindow._winGameBoolTick == false && !WinGameWindow._lockUpdateWinGame)
+            {
+                WinGameWindow.ShowStatic();
+                Score.SetHighscore();
+                WinGameWindow._lockUpdateWinGame = true;
+
+            }
         }
     }
 }

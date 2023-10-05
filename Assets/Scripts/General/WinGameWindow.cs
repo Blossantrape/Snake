@@ -10,6 +10,8 @@ namespace General
         private static WinGameWindow _instance;
         [SerializeField] private VFXController _vfxController;
         [SerializeField] private Snake _snake;
+        public static bool _winGameBoolTick = false;
+        public static bool _lockUpdateWinGame = false;
     
         private void Awake()
         {
@@ -44,6 +46,16 @@ namespace General
         
         public static void HideStatic() {
         _instance.Hide();
+        }
+        
+        public static void WinGameBoolTickTrue()
+        {
+            _winGameBoolTick = true;
+        }
+        
+        public static void WinGameBoolTickFalse()
+        {
+            _winGameBoolTick = false;
         }
     }
 }

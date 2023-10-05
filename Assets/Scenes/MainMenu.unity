@@ -4003,7 +4003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use gamepad on the screen to control
+  m_text: "Use gamepad \non the screen \nto control"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75213efb3dd9ae543806ec68f52fb489, type: 2}
   m_sharedMaterial: {fileID: -4857815861705271806, guid: 75213efb3dd9ae543806ec68f52fb489, type: 2}
@@ -4046,7 +4046,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4754,7 +4754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eat food to grow
+  m_text: "Eat food \nto grow"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 75213efb3dd9ae543806ec68f52fb489, type: 2}
   m_sharedMaterial: {fileID: -4857815861705271806, guid: 75213efb3dd9ae543806ec68f52fb489, type: 2}
@@ -5289,7 +5289,7 @@ RectTransform:
   m_GameObject: {fileID: 1931092279}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1248083868}

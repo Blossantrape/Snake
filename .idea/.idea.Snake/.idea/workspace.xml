@@ -6,12 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="f7fafd9a-61d0-4cab-8f52-ad27f66fcf94" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Snake/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.cmake/api/v1/reply/cache-v2-265fee8e689123d47f97.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.cmake/api/v1/reply/cmakeFiles-v1-d3284a6d2b6a4346cc80.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.cmake/api/v1/reply/index-2023-10-01T17-52-08-0006.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/.utmp/RelWithDebInfo/716s2t5g/armeabi-v7a/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DebugPlus/DebugPlusScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DebugPlus/DebugPlusScript.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/GameHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/SoundManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/General/WinGameWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/General/WinGameWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +153,8 @@
       <workItem from="1696176419832" duration="2679000" />
       <workItem from="1696179168887" duration="3011000" />
       <workItem from="1696450272891" duration="6219000" />
-      <workItem from="1696456674401" duration="551000" />
+      <workItem from="1696456674401" duration="610000" />
+      <workItem from="1696526325138" duration="5905000" />
     </task>
     <task id="LOCAL-00001" summary="minor fix Rider">
       <option name="closed" value="true" />
